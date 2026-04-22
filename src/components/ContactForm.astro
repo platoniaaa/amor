@@ -1,0 +1,208 @@
+---
+const serviceOptions = [
+  'Creación de contenido',
+  'Campañas Meta Ads',
+  'Página web',
+  'Plan combinado',
+  'Aún no lo tengo claro'
+];
+---
+
+<section id="contacto" class="relative py-16 md:py-32 overflow-hidden" style="background-color: var(--clr-bone);">
+  <div class="absolute inset-0 noise-bg opacity-40"></div>
+
+  <!-- Decorative elements -->
+  <div class="absolute top-10 right-10 w-72 h-72 rounded-full blur-3xl opacity-50 pointer-events-none" style="background-color: var(--clr-cream);"></div>
+  <div class="absolute bottom-10 left-10 w-64 h-64 rounded-full blur-3xl opacity-40 pointer-events-none" style="background-color: var(--clr-blue);"></div>
+
+  <div class="max-w-[1280px] mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
+    <div class="grid lg:grid-cols-[0.9fr_1.1fr] gap-10 lg:gap-16 items-start">
+      <!-- Left: Info -->
+      <div class="fade-up order-2 lg:order-1">
+        <span class="eyebrow mb-6 inline-block">Conversemos</span>
+
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-medium text-primary mb-6 tracking-tight leading-[1.05] mt-5" style="font-family: var(--font-heading);">
+          Postulemos tu <span class="italic-accent" style="color: var(--clr-primary-light);">cupo</span>.
+        </h2>
+
+        <p class="text-text-muted text-base md:text-lg mb-10 leading-relaxed max-w-lg">
+          Cuéntanos brevemente sobre tu marca. Si somos un buen fit, te contactamos en menos de 48 horas con una propuesta inicial.
+        </p>
+
+        <!-- Contact info -->
+        <div class="space-y-5 mb-10">
+          <a href="mailto:hola@studio14.cl" class="flex items-center gap-4 group touch-manipulation">
+            <div class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 border border-primary/15 transition-all group-hover:scale-105" style="background-color: var(--clr-cream);">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--clr-primary);"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <p class="font-mono-accent text-[10px] tracking-widest uppercase text-text-muted mb-0.5">Email</p>
+              <p class="text-primary font-medium text-sm">hola@studio14.cl</p>
+            </div>
+          </a>
+
+          <a href="https://wa.me/56900000000" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 group touch-manipulation">
+            <div class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 border border-primary/15 transition-all group-hover:scale-105" style="background-color: var(--clr-blue);">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--clr-primary);"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div>
+              <p class="font-mono-accent text-[10px] tracking-widest uppercase text-text-muted mb-0.5">WhatsApp</p>
+              <p class="text-primary font-medium text-sm">Respondemos en menos de 24h</p>
+            </div>
+          </a>
+
+          <div class="flex items-center gap-4">
+            <div class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 border border-primary/15" style="background-color: var(--clr-cream-soft);">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--clr-primary);"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <p class="font-mono-accent text-[10px] tracking-widest uppercase text-text-muted mb-0.5">Studio</p>
+              <p class="text-primary font-medium text-sm">Santiago, Chile</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Spots remaining notice -->
+        <div class="rounded-2xl p-5 border" style="background-color: var(--clr-cream); border-color: rgba(67, 48, 46, 0.15);">
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" style="color: var(--clr-primary);">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+            <div>
+              <p class="font-medium text-primary text-sm mb-1" style="font-family: var(--font-heading);">Cupos limitados</p>
+              <p class="text-text-muted text-sm leading-relaxed">
+                Trabajamos con máximo 5 marcas al mes. Si no quedan cupos, te avisamos y te agendamos para el siguiente ciclo.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Form -->
+      <div class="fade-up order-1 lg:order-2">
+        <form id="contact-form" class="rounded-3xl p-6 md:p-10 shadow-editorial-lg space-y-5 border" style="background-color: var(--clr-white); border-color: rgba(67, 48, 46, 0.08);">
+          <div>
+            <label for="nombre" class="block text-sm font-medium text-primary mb-2" style="font-family: var(--font-heading);">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required placeholder="María Fernanda"
+              class="form-input" />
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label for="email" class="block text-sm font-medium text-primary mb-2" style="font-family: var(--font-heading);">Email</label>
+              <input type="email" id="email" name="email" required placeholder="tu@correo.com"
+                class="form-input" />
+            </div>
+            <div>
+              <label for="telefono" class="block text-sm font-medium text-primary mb-2" style="font-family: var(--font-heading);">WhatsApp</label>
+              <input type="tel" id="telefono" name="telefono" placeholder="+56 9 XXXX XXXX"
+                class="form-input" />
+            </div>
+          </div>
+
+          <div>
+            <label for="empresa" class="block text-sm font-medium text-primary mb-2" style="font-family: var(--font-heading);">Nombre de tu marca</label>
+            <input type="text" id="empresa" name="empresa" placeholder="Tu marca"
+              class="form-input" />
+          </div>
+
+          <div>
+            <label for="servicio" class="block text-sm font-medium text-primary mb-2" style="font-family: var(--font-heading);">¿Qué te interesa?</label>
+            <select id="servicio" name="servicio" required class="form-input">
+              <option value="" disabled selected>Selecciona una opción</option>
+              {serviceOptions.map(opt => (
+                <option value={opt}>{opt}</option>
+              ))}
+            </select>
+          </div>
+
+          <div>
+            <label for="mensaje" class="block text-sm font-medium text-primary mb-2" style="font-family: var(--font-heading);">
+              Cuéntanos de tu marca
+            </label>
+            <textarea id="mensaje" name="mensaje" required rows="4" placeholder="A qué te dedicas, qué estás buscando y cómo te gustaría que se vea tu marca."
+              class="form-input resize-none"></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary w-full !py-4 !text-base touch-manipulation">
+            Enviar postulación &rarr;
+          </button>
+
+          <p class="text-center text-xs text-text-muted font-mono-accent tracking-wide">
+            Respondemos solo a postulaciones que hagan fit con el studio.
+          </p>
+
+          <div id="form-success" class="hidden text-center py-4">
+            <div class="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-3" style="background-color: var(--clr-cream);">
+              <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="color: var(--clr-primary);">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+              </svg>
+            </div>
+            <div class="italic-accent text-2xl mb-1" style="color: var(--clr-primary);">¡Gracias!</div>
+            <p class="text-text-muted text-sm">Recibimos tu postulación. Te contactamos en menos de 48 horas.</p>
+          </div>
+
+          <div id="form-error" class="hidden text-center py-2">
+            <p class="text-red-600 text-sm">Por favor completa todos los campos obligatorios.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .form-input {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border-radius: 0.85rem;
+    border: 1px solid rgba(67, 48, 46, 0.15);
+    background-color: rgba(250, 246, 238, 0.4);
+    outline: none;
+    transition: all 0.25s;
+    font-size: 0.95rem;
+    color: var(--clr-text);
+    font-family: var(--font-sans);
+  }
+
+  .form-input::placeholder {
+    color: rgba(107, 95, 93, 0.6);
+  }
+
+  .form-input:focus {
+    border-color: var(--clr-primary);
+    background-color: var(--clr-white);
+    box-shadow: 0 0 0 3px rgba(67, 48, 46, 0.08);
+  }
+</style>
+
+<script>
+  const form = document.getElementById('contact-form') as HTMLFormElement;
+  const successMsg = document.getElementById('form-success')!;
+  const errorMsg = document.getElementById('form-error')!;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const nombre = formData.get('nombre');
+    const email = formData.get('email');
+    const servicio = formData.get('servicio');
+    const mensaje = formData.get('mensaje');
+
+    if (!nombre || !email || !servicio || !mensaje) {
+      errorMsg.classList.remove('hidden');
+      setTimeout(() => errorMsg.classList.add('hidden'), 3000);
+      return;
+    }
+
+    const submitBtn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = 'Enviando...';
+
+    setTimeout(() => {
+      form.querySelectorAll('input, textarea, select, button').forEach(el => (el as HTMLElement).style.display = 'none');
+      successMsg.classList.remove('hidden');
+    }, 1000);
+  });
+</script>

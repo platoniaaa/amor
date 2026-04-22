@@ -1,0 +1,114 @@
+---
+---
+
+<section id="hero" class="relative flex items-center overflow-hidden py-16 md:py-24 lg:py-0 lg:min-h-[calc(100svh-6rem)]" style="background-color: var(--clr-cream);">
+  <!-- Editorial gradient background -->
+  <div class="absolute inset-0 gradient-editorial"></div>
+  <!-- Noise texture -->
+  <div class="absolute inset-0 noise-bg"></div>
+
+  <!-- Large decorative "14" in background -->
+  <div class="absolute -bottom-20 -right-10 md:-bottom-32 md:-right-16 pointer-events-none select-none opacity-[0.07]">
+    <span class="text-[22rem] md:text-[40rem] leading-none font-bold text-primary" style="font-family: var(--font-heading); font-style: italic;">14</span>
+  </div>
+
+  <!-- Decorative floating elements -->
+  <div class="hidden sm:block absolute top-32 right-[12%] w-40 h-40 rounded-full" style="background-color: var(--clr-blue); filter: blur(60px); opacity: 0.6; animation: float 8s ease-in-out infinite;"></div>
+  <div class="hidden sm:block absolute bottom-1/3 left-[8%] w-48 h-48 rounded-full" style="background-color: var(--clr-cream); filter: blur(80px); opacity: 0.7; animation: float 10s ease-in-out infinite 1.5s;"></div>
+
+  <div class="max-w-[1280px] mx-auto px-5 sm:px-6 lg:px-8 relative z-10 w-full">
+    <div class="grid lg:grid-cols-[1.15fr_0.85fr] gap-12 lg:gap-20 items-center">
+      <!-- Text Content -->
+      <div class="max-w-2xl text-center lg:text-left mx-auto lg:mx-0">
+        <!-- Limited spots chip -->
+        <div class="hero-reveal hero-reveal-1 mb-6 md:mb-8 flex justify-center lg:justify-start">
+          <span class="chip-limited">
+            Solo 5 cupos disponibles · 2026
+          </span>
+        </div>
+
+        <h1 class="hero-reveal hero-reveal-2 text-[2.25rem] sm:text-5xl md:text-6xl lg:text-[4.5rem] xl:text-[5.25rem] font-medium text-primary leading-[1.02] mb-6 md:mb-8 tracking-tight" style="font-family: var(--font-heading);">
+          Tu marca merece
+          <span class="italic-accent block" style="color: var(--clr-primary-light);">estar presente,</span>
+          no solo publicar.
+        </h1>
+
+        <p class="hero-reveal hero-reveal-3 text-[1rem] md:text-lg text-text-muted mb-8 md:mb-10 max-w-xl leading-relaxed mx-auto lg:mx-0">
+          Somos <strong class="text-primary font-semibold">Studio 14</strong>, una agencia boutique que cuida la presencia digital de marcas que valoran la estética por sobre el algoritmo. Contenido, campañas y web — todo bajo una misma mirada curada.
+        </p>
+
+        <div class="hero-reveal hero-reveal-4 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
+          <a href="#contacto" class="btn-primary text-[0.95rem] !py-4 !px-8 w-full sm:w-auto text-center touch-manipulation">
+            Reservar mi cupo &rarr;
+          </a>
+          <a href="#servicios" class="btn-secondary text-[0.95rem] !py-4 !px-8 w-full sm:w-auto text-center touch-manipulation">
+            Ver servicios
+          </a>
+        </div>
+
+        <!-- Tiny credibility line -->
+        <div class="hero-reveal hero-reveal-5 mt-10 flex items-center gap-3 justify-center lg:justify-start">
+          <div class="flex -space-x-2">
+            <div class="w-8 h-8 rounded-full border-2 border-cream" style="background-color: var(--clr-blue);"></div>
+            <div class="w-8 h-8 rounded-full border-2 border-cream" style="background-color: var(--clr-primary-light);"></div>
+            <div class="w-8 h-8 rounded-full border-2 border-cream" style="background-color: var(--clr-primary);"></div>
+          </div>
+          <p class="text-xs md:text-sm text-text-muted font-mono-accent tracking-wide">
+            Marcas curadas que nos eligen
+          </p>
+        </div>
+      </div>
+
+      <!-- Visual Element — Editorial mockup frame -->
+      <div class="hero-reveal hero-reveal-5 hidden lg:flex items-center justify-center">
+        <div class="relative w-full max-w-md">
+          <!-- Phone mockup with content preview -->
+          <div class="relative mx-auto w-[280px] rounded-[2.5rem] border-[10px] border-primary shadow-editorial-lg overflow-hidden" style="background-color: var(--clr-cream);">
+            <div class="aspect-[9/19.5] relative flex flex-col">
+              <!-- Fake status bar -->
+              <div class="flex justify-between items-center px-6 pt-3 pb-2 text-[10px] font-mono-accent text-primary">
+                <span>9:41</span>
+                <span>STUDIO 14</span>
+              </div>
+
+              <!-- Content area -->
+              <div class="flex-1 p-4 flex flex-col gap-3">
+                <div class="rounded-xl aspect-square w-full relative overflow-hidden" style="background-color: var(--clr-blue);">
+                  <div class="absolute inset-3 rounded-lg border border-primary/20"></div>
+                  <div class="absolute bottom-3 left-3 right-3">
+                    <div class="h-2 bg-primary/30 rounded-full w-3/4 mb-1.5"></div>
+                    <div class="h-2 bg-primary/20 rounded-full w-1/2"></div>
+                  </div>
+                </div>
+                <div class="flex gap-2">
+                  <div class="flex-1 h-20 rounded-lg" style="background-color: var(--clr-primary);"></div>
+                  <div class="flex-1 h-20 rounded-lg" style="background-color: var(--clr-cream-soft); border: 1px solid rgba(67, 48, 46, 0.15);"></div>
+                </div>
+                <div class="h-3 bg-primary/15 rounded-full w-5/6"></div>
+                <div class="h-3 bg-primary/10 rounded-full w-2/3"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating "Reel" badge -->
+          <div class="absolute -top-4 -left-6 bg-white px-4 py-2.5 rounded-2xl shadow-editorial-lg flex items-center gap-2" style="animation: float 5s ease-in-out infinite;">
+            <div class="w-2 h-2 rounded-full bg-red-500"></div>
+            <span class="font-mono-accent text-[10px] text-primary font-medium tracking-wider">REEL · 00:14</span>
+          </div>
+
+          <!-- Floating "Meta Ads" badge -->
+          <div class="absolute top-1/3 -right-8 px-4 py-3 rounded-2xl shadow-editorial-lg" style="background-color: var(--clr-blue); animation: float 6s ease-in-out infinite 1s;">
+            <p class="text-[9px] font-mono-accent text-primary/60 mb-0.5 tracking-widest">CTR</p>
+            <p class="font-mono-accent text-lg font-bold text-primary">+3.2x</p>
+          </div>
+
+          <!-- Floating "Brand book" badge -->
+          <div class="absolute -bottom-5 -right-4 bg-primary text-cream px-5 py-3 rounded-2xl shadow-editorial-lg" style="animation: float 7s ease-in-out infinite 0.5s;">
+            <p class="text-[9px] font-mono-accent tracking-widest opacity-70 mb-0.5">BRAND</p>
+            <p class="italic-accent text-sm">Curada a mano</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

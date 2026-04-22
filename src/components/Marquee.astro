@@ -1,0 +1,73 @@
+---
+const items = [
+  'Solo 5 cupos al mes',
+  'Agencia boutique',
+  'Contenido curado',
+  'Meta Ads con criterio',
+  'Web con estilo',
+  'Est. Santiago 2024',
+  'Presencia, no venta forzada'
+];
+// Duplicate for seamless marquee loop
+const marquee = [...items, ...items];
+---
+
+<div class="marquee-bar" role="presentation" aria-hidden="true">
+  <div class="marquee-track">
+    {marquee.map(item => (
+      <span class="marquee-item">
+        <span class="marquee-text">{item}</span>
+        <span class="marquee-dot">&#9679;</span>
+      </span>
+    ))}
+  </div>
+</div>
+
+<style>
+  .marquee-bar {
+    position: relative;
+    width: 100%;
+    background-color: var(--clr-primary);
+    color: var(--clr-cream);
+    overflow: hidden;
+    padding: 0.55rem 0;
+    z-index: 51;
+    border-bottom: 1px solid rgba(255, 241, 181, 0.12);
+  }
+
+  .marquee-track {
+    display: inline-flex;
+    white-space: nowrap;
+    animation: marquee 42s linear infinite;
+    will-change: transform;
+  }
+
+  .marquee-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.75rem;
+    padding-right: 1.75rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .marquee-text {
+    white-space: nowrap;
+  }
+
+  .marquee-dot {
+    font-size: 0.5rem;
+    opacity: 0.55;
+    color: var(--clr-cream);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-track {
+      animation: none;
+      transform: translateX(0);
+    }
+  }
+</style>

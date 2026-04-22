@@ -1,0 +1,212 @@
+---
+---
+
+<nav id="navbar" class="sticky top-0 left-0 right-0 z-50 transition-all duration-500" style="background: transparent;">
+  <div class="max-w-[1280px] mx-auto px-5 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 md:h-20">
+      <!-- Logo - Wordmark -->
+      <a href="#" class="flex-shrink-0 relative z-[70] group">
+        <div class="flex items-baseline gap-0.5">
+          <span class="italic-accent text-2xl md:text-[1.7rem] font-medium tracking-tight" style="color: var(--clr-primary);">Studio</span>
+          <span class="font-mono-accent text-xl md:text-2xl font-bold ml-0.5" style="color: var(--clr-primary);">14</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#servicios" class="nav-link text-sm font-medium transition-colors duration-300" style="color: var(--clr-primary);">Servicios</a>
+        <a href="#por-que-studio14" class="nav-link text-sm font-medium transition-colors duration-300" style="color: var(--clr-primary);">¿Por qué nosotros?</a>
+        <a href="#nosotros" class="nav-link text-sm font-medium transition-colors duration-300" style="color: var(--clr-primary);">Studio</a>
+        <a href="#contacto" class="nav-link text-sm font-medium transition-colors duration-300" style="color: var(--clr-primary);">Contacto</a>
+        <a href="#contacto" class="btn-primary !py-2.5 !px-6 !text-sm">Reservar cupo</a>
+      </div>
+
+      <!-- Mobile Hamburger -->
+      <button id="menu-toggle" class="md:hidden p-3 -mr-2 relative z-[70] touch-manipulation" style="color: var(--clr-primary);" aria-label="Abrir menú">
+        <div id="hamburger" class="w-6 h-5 relative flex flex-col justify-between">
+          <span class="hamburger-line w-full h-0.5 bg-current transition-all duration-300 origin-center"></span>
+          <span class="hamburger-line w-full h-0.5 bg-current transition-all duration-300"></span>
+          <span class="hamburger-line w-full h-0.5 bg-current transition-all duration-300 origin-center"></span>
+        </div>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu overlay -->
+<div id="mobile-menu" class="mobile-menu-overlay md:hidden" style="display:none;">
+  <button id="mobile-close" class="mobile-menu-close touch-manipulation" aria-label="Cerrar menú">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="18" y1="6" x2="6" y2="18"></line>
+      <line x1="6" y1="6" x2="18" y2="18"></line>
+    </svg>
+  </button>
+  <div class="mobile-menu-content">
+    <div class="italic-accent text-3xl font-medium mb-6" style="color: var(--clr-cream);">Studio <span class="font-mono-accent font-bold">14</span></div>
+    <a href="#servicios" class="mobile-link">Servicios</a>
+    <a href="#por-que-studio14" class="mobile-link">¿Por qué nosotros?</a>
+    <a href="#nosotros" class="mobile-link">Studio</a>
+    <a href="#contacto" class="mobile-link">Contacto</a>
+    <a href="#contacto" class="btn-cream !py-3.5 !px-10 !text-lg mt-6 touch-manipulation">Reservar cupo</a>
+  </div>
+</div>
+
+<script>
+  const navbar = document.getElementById('navbar');
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.querySelectorAll('.nav-link');
+  let menuOpen = false;
+
+  function updateNavbar() {
+    if (!navbar) return;
+    const scrolled = window.scrollY > 50;
+
+    if (scrolled && !menuOpen) {
+      navbar.style.background = 'rgba(250, 246, 238, 0.85)';
+      navbar.style.backdropFilter = 'blur(12px)';
+      (navbar.style as any).webkitBackdropFilter = 'blur(12px)';
+      navbar.style.boxShadow = '0 1px 20px rgba(67, 48, 46, 0.06)';
+    } else if (!menuOpen) {
+      navbar.style.background = 'transparent';
+      navbar.style.backdropFilter = 'none';
+      (navbar.style as any).webkitBackdropFilter = 'none';
+      navbar.style.boxShadow = 'none';
+    }
+  }
+
+  updateNavbar();
+  window.addEventListener('scroll', updateNavbar);
+
+  menuToggle?.addEventListener('click', () => {
+    menuOpen = !menuOpen;
+    if (menuOpen) {
+      if (mobileMenu) mobileMenu.style.display = 'flex';
+      hamburger?.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflow = 'hidden';
+      if (navbar) {
+        navbar.style.background = 'transparent';
+        navbar.style.backdropFilter = 'none';
+        navbar.style.boxShadow = 'none';
+      }
+    } else {
+      closeMenu();
+    }
+  });
+
+  function closeMenu() {
+    menuOpen = false;
+    if (mobileMenu) mobileMenu.style.display = 'none';
+    hamburger?.classList.remove('open');
+    document.body.style.overflow = '';
+    document.documentElement.style.overflow = '';
+    updateNavbar();
+  }
+
+  document.querySelectorAll('.mobile-link').forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  document.getElementById('mobile-close')?.addEventListener('click', closeMenu);
+
+  const sections = document.querySelectorAll('section[id]');
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => {
+            const isActive = link.getAttribute('href') === `#${entry.target.id}`;
+            if (isActive) {
+              link.classList.add('!font-bold');
+            } else {
+              link.classList.remove('!font-bold');
+            }
+          });
+        }
+      });
+    },
+    { rootMargin: '-20% 0px -80% 0px' }
+  );
+  sections.forEach(section => observer.observe(section));
+</script>
+
+<style>
+  .nav-link:hover {
+    opacity: 0.7;
+  }
+
+  #hamburger.open .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  #hamburger.open .hamburger-line:nth-child(2) {
+    opacity: 0;
+  }
+  #hamburger.open .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+
+  .mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    z-index: 60;
+    background: rgba(42, 29, 27, 0.97);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+  }
+
+  .mobile-menu-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    width: 100%;
+  }
+
+  .mobile-menu-content .mobile-link {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    font-weight: 500;
+    color: rgba(255, 241, 181, 0.9);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.2s;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+
+  .mobile-menu-content .mobile-link:hover,
+  .mobile-menu-content .mobile-link:active {
+    color: #C1DBE8;
+  }
+
+  .mobile-menu-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 241, 181, 0.12);
+    border: 1px solid rgba(255, 241, 181, 0.2);
+    border-radius: 12px;
+    cursor: pointer;
+    color: var(--clr-cream);
+    z-index: 65;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .mobile-menu-close:active {
+    background: rgba(255, 241, 181, 0.25);
+  }
+</style>

@@ -1,0 +1,79 @@
+---
+const values = [
+  {
+    title: 'Curaduría',
+    description: 'Cada pieza pasa por una mirada editorial antes de ver luz.'
+  },
+  {
+    title: 'Tiempo',
+    description: 'Cuidamos pocas marcas para darle a cada una el tiempo que merece.'
+  },
+  {
+    title: 'Estética',
+    description: 'Lo bonito no es un adorno — es parte del producto.'
+  },
+  {
+    title: 'Honestidad',
+    description: 'Si algo no te hace sentido, lo cambiamos. Sin pelea.'
+  }
+];
+---
+
+<section id="nosotros" class="relative py-16 md:py-32 overflow-hidden" style="background-color: var(--clr-cream);">
+  <div class="absolute inset-0 noise-bg opacity-40"></div>
+
+  <div class="max-w-[1280px] mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
+    <div class="grid lg:grid-cols-[0.9fr_1.1fr] gap-12 md:gap-20 items-center">
+      <!-- Visual side — Editorial composition -->
+      <div class="fade-up relative order-2 lg:order-1">
+        <div class="relative mx-auto max-w-md">
+          <!-- Background cream card -->
+          <div class="absolute -top-4 -left-4 w-full h-full rounded-3xl" style="background-color: var(--clr-blue);"></div>
+
+          <!-- Main "About" card -->
+          <div class="relative rounded-3xl p-8 md:p-10 shadow-editorial-lg" style="background-color: var(--clr-white); border: 1px solid rgba(67, 48, 46, 0.08);">
+            <!-- Huge "14" -->
+            <div class="text-center mb-6">
+              <span class="italic-accent text-[8rem] md:text-[10rem] leading-none font-medium" style="color: var(--clr-primary);">14</span>
+            </div>
+
+            <div class="text-center space-y-4">
+              <p class="font-mono-accent text-[11px] tracking-[0.3em] uppercase" style="color: var(--clr-primary);">Est. 2024 · Santiago</p>
+              <div class="w-12 h-px mx-auto" style="background-color: var(--clr-primary); opacity: 0.3;"></div>
+              <p class="italic-accent text-lg md:text-xl text-primary leading-relaxed">
+                &ldquo;Agencia boutique <br/>para marcas que quieren <br/>verse bien.&rdquo;
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text side -->
+      <div class="fade-up order-1 lg:order-2">
+        <span class="eyebrow mb-6 inline-block">Sobre Studio 14</span>
+
+        <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-primary mb-6 md:mb-8 tracking-tight leading-[1.05] mt-5" style="font-family: var(--font-heading);">
+          Somos un <span class="italic-accent" style="color: var(--clr-primary-light);">estudio pequeño</span> con obsesión por el detalle.
+        </h2>
+
+        <p class="text-base md:text-lg text-text-muted mb-5 leading-relaxed">
+          Nacimos para ocupar un espacio específico: marcas que <strong class="text-primary font-semibold">no venden por Instagram</strong> pero necesitan estar presentes, contar quiénes son y verse al nivel de lo que ofrecen.
+        </p>
+
+        <p class="text-base md:text-lg text-text-muted mb-10 leading-relaxed">
+          No somos una agencia más — somos los que tu marca elegiría si pudiera elegir. Trabajamos con pocos clientes, damos la cara y cuidamos cada pieza como si fuera nuestra.
+        </p>
+
+        <!-- Values grid -->
+        <div class="grid grid-cols-2 gap-4 md:gap-5">
+          {values.map(value => (
+            <div class="p-5 rounded-2xl transition-all duration-300 hover:shadow-editorial" style="background-color: var(--clr-white); border: 1px solid rgba(67, 48, 46, 0.08);">
+              <h4 class="font-medium text-primary text-base mb-1.5" style="font-family: var(--font-heading);">{value.title}</h4>
+              <p class="text-text-muted text-sm leading-relaxed">{value.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
