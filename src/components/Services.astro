@@ -4,23 +4,23 @@ const services = [
     number: '01',
     badge: 'Contenido',
     title: 'Creación de contenido',
-    description: 'Una salida al mes a generar contenido contigo, y de ahí sacamos todo lo que vas a publicar las próximas semanas en tus redes.',
+    description: 'Una salida al mes a generar contenido contigo, y de ahí sacamos todo lo que vas a publicar en tus redes.',
     includes: [
       {
-        title: 'Una salida al mes para generar contenido',
-        detail: 'Vamos a tu local, evento o donde tu marca esté pasando, una vez al mes, y tomamos suficiente material para todo el mes.'
+        title: 'Una salida al mes',
+        detail: 'Vamos a tu local o donde tu marca esté pasando, una vez al mes.'
       },
       {
-        title: 'Editamos y publicamos en tus redes',
-        detail: 'Tomamos lo grabado, lo editamos y lo subimos a tu Instagram como reels, historias y publicaciones del feed. Tú no tienes que hacer nada.'
+        title: 'Editamos y publicamos por ti',
+        detail: 'Reels, historias y posts subidos directo a tus redes.'
       },
       {
-        title: 'Reciclamos el contenido todo el mes',
-        detail: 'De una sola salida sacamos varias piezas: lo que un día fue una historia se transforma en reel a la semana siguiente y en post a la otra. Tu marca queda activa todo el mes.'
+        title: 'Reciclamos el contenido',
+        detail: 'De una salida sacamos piezas para todo el mes.'
       },
       {
         title: 'Manual de marca incluido',
-        detail: 'Te entregamos un documento con los colores, tipografías y estilo visual de tu marca, para que todo lo que se publique siga la misma línea — incluso si en el futuro lo gestiona alguien más.'
+        detail: 'Tus colores, tipografías y estilo visual en un documento.'
       }
     ],
     accentVar: '--clr-cream'
@@ -29,23 +29,23 @@ const services = [
     number: '02',
     badge: 'Performance',
     title: 'Paid Media',
-    description: 'Publicidad pagada en Instagram y Facebook — y solo ahí. Definimos a quién mostrarle los anuncios, creamos el contenido, gestionamos tu presupuesto y al cierre te entregamos un reporte básico con los resultados.',
+    description: 'Publicidad pagada en Instagram y Facebook — y solo ahí. Estrategia, contenido, presupuesto y reporte de cierre.',
     includes: [
       {
-        title: 'Definimos a quién le aparecen los anuncios',
-        detail: 'Configuramos las campañas para que solo las vean personas que podrían convertirse en clientes — por edad, ubicación, intereses y comportamiento en redes.'
+        title: 'Segmentación de audiencia',
+        detail: 'Tus anuncios solo los ve gente que podría ser cliente.'
       },
       {
-        title: 'Creamos el contenido del anuncio',
-        detail: 'Diseñamos las imágenes, videos y textos que aparecerán en el feed o las historias de tu público, pensados para que actúen y no solo miren.'
+        title: 'Diseño del anuncio',
+        detail: 'Imágenes, videos y textos pensados para que actúen.'
       },
       {
-        title: 'Gestionamos tu presupuesto',
-        detail: 'Decidimos cuánto invertir, cuándo y en qué tipo de anuncio según el objetivo de la campaña — más mensajes, más visitas, más seguidores.'
+        title: 'Gestión del presupuesto',
+        detail: 'Definimos cuánto invertir, cuándo y en qué anuncio.'
       },
       {
-        title: 'Reporte mensual básico al cierre',
-        detail: 'Al finalizar cada campaña te enviamos un resumen claro: cuánta gente vio los anuncios, cuántos te contactaron y qué se podría ajustar la próxima vez.'
+        title: 'Reporte básico al cierre',
+        detail: 'Resumen con resultados al finalizar cada campaña.'
       }
     ],
     accentVar: '--clr-blue'
@@ -57,16 +57,20 @@ const services = [
     description: 'Nos juntamos, escuchamos qué necesitas y diseñamos tu página web a medida.',
     includes: [
       {
-        title: 'Reunión inicial para entender tu marca',
-        detail: 'Conversamos para conocer tu negocio, qué quieres mostrar y a quién apunta tu sitio.'
+        title: 'Reunión inicial',
+        detail: 'Conversamos para conocer tu marca y tus objetivos.'
       },
       {
-        title: 'Sitio a tu medida, no una plantilla',
-        detail: 'Diseñado desde cero pensando en tu marca, no un template que se ve igual al de otros 100 negocios.'
+        title: 'Diseño a tu medida',
+        detail: 'Desde cero, no una plantilla copiada.'
       },
       {
-        title: 'Se ve bien en celular y aparece en Google',
-        detail: 'Optimizada para móvil y configurada con lo básico para que Google la encuentre cuando alguien te busca.'
+        title: 'Optimizada para celular y Google',
+        detail: 'Se ve bien en móvil y aparece cuando te buscan.'
+      },
+      {
+        title: 'Dominio incluido el primer año',
+        detail: 'Tu dirección web (ej: tumarca.cl) la primera anualidad.'
       }
     ],
     accentVar: '--clr-primary-light'
@@ -109,7 +113,7 @@ const services = [
           </p>
 
           <!-- Includes -->
-          <div class="space-y-4 mb-8 mt-auto">
+          <div class="space-y-4 mb-8">
             {service.includes.map(item => (
               <div class="flex items-start gap-3">
                 <svg class="w-4 h-4 text-primary/60 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
@@ -124,7 +128,7 @@ const services = [
           </div>
 
           <!-- Accent bar at bottom -->
-          <div class="h-1 rounded-full -mx-2" style={`background-color: var(${service.accentVar});`}></div>
+          <div class="h-1 rounded-full -mx-2 mt-auto" style={`background-color: var(${service.accentVar});`}></div>
         </div>
       ))}
     </div>
