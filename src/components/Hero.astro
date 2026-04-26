@@ -59,56 +59,367 @@
         </div>
       </div>
 
-      <!-- Visual Element — Editorial mockup frame -->
+      <!-- Visual Element — Editorial magazine spread -->
       <div class="hero-reveal hero-reveal-5 hidden lg:flex items-center justify-center">
-        <div class="relative w-full max-w-md">
-          <!-- Phone mockup with content preview -->
-          <div class="relative mx-auto w-[280px] rounded-[2.5rem] border-[10px] border-primary shadow-editorial-lg overflow-hidden" style="background-color: var(--clr-cream);">
-            <div class="aspect-[9/19.5] relative flex flex-col">
-              <!-- Fake status bar -->
-              <div class="flex justify-between items-center px-6 pt-3 pb-2 text-[10px] font-mono-accent text-primary">
-                <span>9:41</span>
-                <span>STUDIO 14</span>
+        <div class="relative w-full max-w-[560px] magazine-wrap">
+          <!-- Magazine spread (top-down view) -->
+          <div class="magazine-spread">
+            <!-- Left page -->
+            <div class="mag-page mag-page-left">
+              <div class="mag-folio mag-folio-left">
+                <span class="font-mono-accent">P. 14</span>
+                <span class="font-mono-accent">STUDIO·14</span>
               </div>
 
-              <!-- Content area -->
-              <div class="flex-1 p-4 flex flex-col gap-3">
-                <div class="rounded-xl aspect-square w-full relative overflow-hidden" style="background-color: var(--clr-blue);">
-                  <div class="absolute inset-3 rounded-lg border border-primary/20"></div>
-                  <div class="absolute bottom-3 left-3 right-3">
-                    <div class="h-2 bg-primary/30 rounded-full w-3/4 mb-1.5"></div>
-                    <div class="h-2 bg-primary/20 rounded-full w-1/2"></div>
-                  </div>
-                </div>
-                <div class="flex gap-2">
-                  <div class="flex-1 h-20 rounded-lg" style="background-color: var(--clr-primary);"></div>
-                  <div class="flex-1 h-20 rounded-lg" style="background-color: var(--clr-cream-soft); border: 1px solid rgba(67, 48, 46, 0.15);"></div>
-                </div>
-                <div class="h-3 bg-primary/15 rounded-full w-5/6"></div>
-                <div class="h-3 bg-primary/10 rounded-full w-2/3"></div>
+              <div class="mag-left-content">
+                <p class="mag-eyebrow font-mono-accent">EDICIÓN N°&nbsp;14</p>
+                <h3 class="mag-headline">
+                  La temporada
+                  <span class="italic-accent" style="color: var(--clr-primary-light);">de las marcas</span>
+                  pequeñas.
+                </h3>
+                <div class="mag-rule"></div>
+                <p class="mag-deck italic-accent">
+                  Cinco marcas. Cinco direcciones de arte. Una sola mirada editorial.
+                </p>
               </div>
+
+              <div class="mag-bottom-meta font-mono-accent">
+                <span>OTOÑO · 2026</span>
+                <span>SCL—CL</span>
+              </div>
+            </div>
+
+            <!-- Right page -->
+            <div class="mag-page mag-page-right">
+              <div class="mag-folio mag-folio-right">
+                <span class="font-mono-accent">P. 15</span>
+                <span class="font-mono-accent">FEATURE</span>
+              </div>
+
+              <!-- Hero image area -->
+              <div class="mag-image">
+                <div class="mag-image-overlay"></div>
+                <div class="mag-image-caption">
+                  <p class="font-mono-accent text-[9px] tracking-widest opacity-80">PROYECTO 014</p>
+                  <p class="italic-accent text-base leading-tight" style="color: var(--clr-cream);">Boutique Hotel <br/>Lastarria</p>
+                </div>
+              </div>
+
+              <!-- Caption + body -->
+              <div class="mag-right-text">
+                <p class="mag-caption font-mono-accent">FOT. STUDIO 14 — DIR. M. F.</p>
+                <p class="mag-body">
+                  <span class="mag-dropcap">U</span>na presencia digital cuidada no se improvisa: se piensa. Esto es lo que hacemos para las marcas que entienden que verse bien también vende.
+                </p>
+              </div>
+
+              <div class="mag-bottom-meta font-mono-accent">
+                <span>14·STUDIO</span>
+                <span>—</span>
+              </div>
+            </div>
+
+            <!-- Center seam shadow -->
+            <div class="mag-seam"></div>
+          </div>
+
+          <!-- Floating accents (editorial press style) -->
+          <div class="mag-badge-tiraje" style="animation: float 7s ease-in-out infinite;">
+            <span class="font-mono-accent text-[9px] tracking-widest opacity-70">TIRAJE</span>
+            <span class="italic-accent text-2xl leading-none">60<sup class="text-xs">/año</sup></span>
+          </div>
+
+          <div class="mag-badge-stamp" style="animation: float 9s ease-in-out infinite 1s;">
+            <div class="mag-stamp-inner">
+              <span class="font-mono-accent text-[8px] tracking-[0.25em] opacity-80">EDIT.</span>
+              <span class="italic-accent text-xl leading-none">N° 14</span>
+              <span class="font-mono-accent text-[8px] tracking-[0.25em] opacity-80">2026</span>
             </div>
           </div>
 
-          <!-- Floating "Reel" badge -->
-          <div class="absolute -top-4 -left-6 bg-white px-4 py-2.5 rounded-2xl shadow-editorial-lg flex items-center gap-2" style="animation: float 5s ease-in-out infinite;">
-            <div class="w-2 h-2 rounded-full bg-red-500"></div>
-            <span class="font-mono-accent text-[10px] text-primary font-medium tracking-wider">REEL · 00:14</span>
-          </div>
-
-          <!-- Floating "Meta Ads" badge -->
-          <div class="absolute top-1/3 -right-8 px-4 py-3 rounded-2xl shadow-editorial-lg" style="background-color: var(--clr-blue); animation: float 6s ease-in-out infinite 1s;">
-            <p class="text-[9px] font-mono-accent text-primary/60 mb-0.5 tracking-widest">CTR</p>
-            <p class="font-mono-accent text-lg font-bold text-primary">+3.2x</p>
-          </div>
-
-          <!-- Floating "Brand book" badge -->
-          <div class="absolute -bottom-5 -right-4 bg-primary text-cream px-5 py-3 rounded-2xl shadow-editorial-lg" style="animation: float 7s ease-in-out infinite 0.5s;">
-            <p class="text-[9px] font-mono-accent tracking-widest opacity-70 mb-0.5">BRAND</p>
-            <p class="italic-accent text-sm">Hecho a mano</p>
+          <div class="mag-badge-clip" style="animation: float 6s ease-in-out infinite 0.5s;">
+            <svg width="20" height="40" viewBox="0 0 20 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M5 35 V8 a5 5 0 0 1 10 0 V32 a3 3 0 0 1-6 0 V12" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+            </svg>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<style>
+  /* === Magazine spread === */
+  .magazine-wrap {
+    perspective: 1800px;
+  }
+
+  .magazine-spread {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    aspect-ratio: 1.45 / 1;
+    transform: rotate(-2.5deg);
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: drop-shadow(0 30px 50px rgba(67, 48, 46, 0.18))
+            drop-shadow(0 12px 18px rgba(67, 48, 46, 0.08));
+  }
+  .magazine-wrap:hover .magazine-spread {
+    transform: rotate(-1deg) translateY(-4px);
+  }
+
+  .mag-page {
+    position: relative;
+    padding: 1.6rem 1.5rem 1.5rem;
+    background-color: var(--clr-bone);
+    background-image:
+      radial-gradient(ellipse at 30% 0%, rgba(67, 48, 46, 0.05) 0%, transparent 50%),
+      radial-gradient(ellipse at 100% 100%, rgba(193, 219, 232, 0.18) 0%, transparent 50%);
+    background-blend-mode: multiply;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mag-page::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.2' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.45'/%3E%3C/svg%3E");
+    opacity: 0.07;
+    pointer-events: none;
+    mix-blend-mode: multiply;
+  }
+
+  .mag-page-left {
+    background-color: var(--clr-cream);
+    border-right: 1px solid rgba(67, 48, 46, 0.08);
+  }
+  .mag-page-right {
+    background-color: var(--clr-bone);
+  }
+
+  /* Folio (running header) */
+  .mag-folio {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.55rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--clr-primary);
+    opacity: 0.55;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(67, 48, 46, 0.18);
+    margin-bottom: 1.2rem;
+  }
+
+  /* Left page content */
+  .mag-left-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.5rem 0;
+  }
+
+  .mag-eyebrow {
+    font-size: 0.6rem;
+    letter-spacing: 0.28em;
+    color: var(--clr-primary);
+    opacity: 0.6;
+    margin-bottom: 0.9rem;
+  }
+
+  .mag-headline {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-size: clamp(1.6rem, 2.8vw, 2.4rem);
+    line-height: 0.98;
+    color: var(--clr-primary);
+    letter-spacing: -0.03em;
+    margin-bottom: 1rem;
+  }
+  .mag-headline .italic-accent {
+    display: block;
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  .mag-rule {
+    width: 36px;
+    height: 1px;
+    background-color: var(--clr-primary);
+    opacity: 0.5;
+    margin: 0.6rem 0 0.9rem;
+  }
+
+  .mag-deck {
+    font-size: 0.78rem;
+    line-height: 1.5;
+    color: var(--clr-primary);
+    opacity: 0.75;
+    max-width: 18rem;
+  }
+
+  /* Bottom meta on both pages */
+  .mag-bottom-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.55rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--clr-primary);
+    opacity: 0.4;
+    padding-top: 0.6rem;
+    border-top: 1px solid rgba(67, 48, 46, 0.14);
+    margin-top: 0.8rem;
+  }
+
+  /* Right page — image block */
+  .mag-image {
+    position: relative;
+    aspect-ratio: 4 / 3.4;
+    width: 100%;
+    background:
+      linear-gradient(135deg, var(--clr-blue) 0%, var(--clr-cream-soft) 60%, var(--clr-primary-light) 130%);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-bottom: 0.85rem;
+    box-shadow: inset 0 0 0 1px rgba(67, 48, 46, 0.1);
+  }
+
+  .mag-image-overlay {
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 70% 25%, rgba(255, 241, 181, 0.55) 0%, transparent 45%),
+      radial-gradient(circle at 20% 80%, rgba(67, 48, 46, 0.4) 0%, transparent 55%);
+    mix-blend-mode: multiply;
+  }
+
+  .mag-image-caption {
+    position: absolute;
+    left: 0.85rem;
+    bottom: 0.75rem;
+    color: var(--clr-cream);
+    text-shadow: 0 1px 8px rgba(42, 29, 27, 0.45);
+  }
+
+  .mag-right-text {
+    flex: 1;
+  }
+
+  .mag-caption {
+    font-size: 0.55rem;
+    letter-spacing: 0.22em;
+    color: var(--clr-primary);
+    opacity: 0.55;
+    margin-bottom: 0.55rem;
+  }
+
+  .mag-body {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    line-height: 1.4;
+    color: var(--clr-primary);
+    text-align: justify;
+    column-count: 1;
+  }
+
+  .mag-dropcap {
+    float: left;
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 2.6rem;
+    line-height: 0.85;
+    padding: 0.15rem 0.4rem 0 0;
+    color: var(--clr-primary);
+    font-weight: 500;
+  }
+
+  /* Center seam */
+  .mag-seam {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 14px;
+    transform: translateX(-50%);
+    background:
+      linear-gradient(to right,
+        rgba(67, 48, 46, 0) 0%,
+        rgba(67, 48, 46, 0.18) 45%,
+        rgba(67, 48, 46, 0.32) 50%,
+        rgba(67, 48, 46, 0.18) 55%,
+        rgba(67, 48, 46, 0) 100%);
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  /* Floating accents */
+  .mag-badge-tiraje {
+    position: absolute;
+    top: -22px;
+    left: -24px;
+    background-color: var(--clr-primary);
+    color: var(--clr-cream);
+    padding: 0.6rem 0.9rem;
+    border-radius: 4px;
+    transform: rotate(-5deg);
+    box-shadow: 0 10px 30px -8px rgba(67, 48, 46, 0.4);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    z-index: 3;
+  }
+  .mag-badge-tiraje sup {
+    font-family: var(--font-mono);
+    opacity: 0.7;
+    font-size: 0.55rem;
+    margin-left: 1px;
+  }
+
+  .mag-badge-stamp {
+    position: absolute;
+    bottom: -28px;
+    right: -10px;
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    background-color: var(--clr-cream);
+    border: 1.5px solid var(--clr-primary);
+    color: var(--clr-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(8deg);
+    box-shadow: 0 12px 26px -10px rgba(67, 48, 46, 0.35);
+    z-index: 3;
+  }
+  .mag-stamp-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    text-align: center;
+  }
+
+  .mag-badge-clip {
+    position: absolute;
+    top: -18px;
+    right: 18%;
+    color: var(--clr-primary);
+    transform: rotate(20deg);
+    opacity: 0.55;
+    z-index: 2;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .mag-badge-tiraje,
+    .mag-badge-stamp,
+    .mag-badge-clip { animation: none !important; }
+    .magazine-spread { transition: none; }
+  }
+</style>
