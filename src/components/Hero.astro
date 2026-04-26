@@ -1,425 +1,349 @@
 ---
 ---
 
-<section id="hero" class="relative flex items-center overflow-hidden py-16 md:py-24 lg:py-0 lg:min-h-[calc(100svh-6rem)]" style="background-color: var(--clr-cream);">
-  <!-- Editorial gradient background -->
-  <div class="absolute inset-0 gradient-editorial"></div>
-  <!-- Noise texture -->
-  <div class="absolute inset-0 noise-bg"></div>
+<section id="hero" class="hero-cinematic relative overflow-hidden flex items-center justify-center" style="background-color: var(--clr-cream);">
+  <!-- Animated mesh background -->
+  <div class="absolute inset-0 hero-mesh"></div>
+  <div class="absolute inset-0 hero-vignette"></div>
+  <div class="absolute inset-0 noise-bg" style="opacity: 0.85;"></div>
 
-  <!-- Large decorative "14" in background -->
-  <div class="absolute -bottom-20 -right-10 md:-bottom-32 md:-right-16 pointer-events-none select-none opacity-[0.07]">
-    <span class="text-[22rem] md:text-[40rem] leading-none font-bold text-primary" style="font-family: var(--font-heading); font-style: italic;">14</span>
+  <!-- HUGE faded "14" decorative -->
+  <div class="hero-bg-numeral pointer-events-none select-none" aria-hidden="true">
+    <span class="italic-accent">14</span>
   </div>
 
-  <!-- Decorative floating elements -->
-  <div class="hidden sm:block absolute top-32 right-[12%] w-40 h-40 rounded-full" style="background-color: var(--clr-blue); filter: blur(60px); opacity: 0.6; animation: float 8s ease-in-out infinite;"></div>
-  <div class="hidden sm:block absolute bottom-1/3 left-[8%] w-48 h-48 rounded-full" style="background-color: var(--clr-cream); filter: blur(80px); opacity: 0.7; animation: float 10s ease-in-out infinite 1.5s;"></div>
+  <!-- Top-left masthead -->
+  <div class="hero-corner hero-corner-tl hero-reveal hero-reveal-1" aria-hidden="true">
+    <span class="font-mono-accent">STUDIO·14</span>
+    <span class="hero-rule"></span>
+    <span class="font-mono-accent">VOL. 14 · ’26</span>
+  </div>
 
-  <div class="max-w-[1280px] mx-auto px-5 sm:px-6 lg:px-8 relative z-10 w-full">
-    <div class="grid lg:grid-cols-[1.15fr_0.85fr] gap-12 lg:gap-20 items-center">
-      <!-- Text Content -->
-      <div class="max-w-2xl text-center lg:text-left mx-auto lg:mx-0">
-        <!-- Limited spots chip -->
-        <div class="hero-reveal hero-reveal-1 mb-6 md:mb-8 flex justify-center lg:justify-start">
-          <span class="chip-limited">
-            Solo 5 cupos disponibles · 2026
-          </span>
-        </div>
+  <!-- Top-right chip -->
+  <div class="hero-corner hero-corner-tr hero-reveal hero-reveal-1">
+    <span class="chip-limited">5 cupos · Abril 2026</span>
+  </div>
 
-        <h1 class="hero-reveal hero-reveal-2 text-[2.25rem] sm:text-5xl md:text-6xl lg:text-[4.5rem] xl:text-[5.25rem] font-medium text-primary leading-[1.02] mb-6 md:mb-8 tracking-tight" style="font-family: var(--font-heading);">
-          Tu marca merece
-          <span class="italic-accent block" style="color: var(--clr-primary-light);">estar presente,</span>
-          no solo publicar.
-        </h1>
-
-        <p class="hero-reveal hero-reveal-3 text-[1rem] md:text-lg text-text-muted mb-8 md:mb-10 max-w-xl leading-relaxed mx-auto lg:mx-0">
-          Somos <strong class="text-primary font-semibold">Studio 14</strong>, una agencia boutique que cuida la presencia digital de marcas que valoran la estética por sobre el algoritmo. Contenido, campañas y web — todo con una misma mirada y un mismo criterio.
-        </p>
-
-        <div class="hero-reveal hero-reveal-4 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
-          <a href="#contacto" class="btn-primary text-[0.95rem] !py-4 !px-8 w-full sm:w-auto text-center touch-manipulation">
-            Reservar mi cupo &rarr;
-          </a>
-          <a href="#servicios" class="btn-secondary text-[0.95rem] !py-4 !px-8 w-full sm:w-auto text-center touch-manipulation">
-            Ver servicios
-          </a>
-        </div>
-
-        <!-- Tiny credibility line -->
-        <div class="hero-reveal hero-reveal-5 mt-10 flex items-center gap-3 justify-center lg:justify-start">
-          <div class="flex -space-x-2">
-            <div class="w-8 h-8 rounded-full border-2 border-cream" style="background-color: var(--clr-blue);"></div>
-            <div class="w-8 h-8 rounded-full border-2 border-cream" style="background-color: var(--clr-primary-light);"></div>
-            <div class="w-8 h-8 rounded-full border-2 border-cream" style="background-color: var(--clr-primary);"></div>
-          </div>
-          <p class="text-xs md:text-sm text-text-muted font-mono-accent tracking-wide">
-            Marcas que nos eligen mes a mes
-          </p>
-        </div>
+  <!-- Bottom-left credit line -->
+  <div class="hero-corner hero-corner-bl hero-reveal hero-reveal-5" aria-hidden="true">
+    <div class="flex items-center gap-3">
+      <div class="flex -space-x-2">
+        <div class="w-7 h-7 rounded-full border-2" style="background-color: var(--clr-blue); border-color: var(--clr-cream);"></div>
+        <div class="w-7 h-7 rounded-full border-2" style="background-color: var(--clr-primary-light); border-color: var(--clr-cream);"></div>
+        <div class="w-7 h-7 rounded-full border-2" style="background-color: var(--clr-primary); border-color: var(--clr-cream);"></div>
       </div>
+      <p class="text-[10px] md:text-xs text-primary/60 font-mono-accent tracking-widest uppercase">
+        Marcas que nos eligen mes a mes
+      </p>
+    </div>
+  </div>
 
-      <!-- Visual Element — Editorial magazine spread -->
-      <div class="hero-reveal hero-reveal-5 hidden lg:flex items-center justify-center">
-        <div class="relative w-full max-w-[560px] magazine-wrap">
-          <!-- Magazine spread (top-down view) -->
-          <div class="magazine-spread">
-            <!-- Left page -->
-            <div class="mag-page mag-page-left">
-              <div class="mag-folio mag-folio-left">
-                <span class="font-mono-accent">P. 14</span>
-                <span class="font-mono-accent">STUDIO·14</span>
-              </div>
+  <!-- Bottom-right edition stamp -->
+  <div class="hero-corner hero-corner-br hero-reveal hero-reveal-5" aria-hidden="true">
+    <div class="hero-stamp">
+      <span class="font-mono-accent text-[8px] tracking-[0.3em]">PRESS</span>
+      <span class="italic-accent text-2xl leading-none">N°14</span>
+      <span class="font-mono-accent text-[8px] tracking-[0.3em]">2026</span>
+    </div>
+  </div>
 
-              <div class="mag-left-content">
-                <p class="mag-eyebrow font-mono-accent">EDICIÓN N°&nbsp;14</p>
-                <h3 class="mag-headline">
-                  La temporada
-                  <span class="italic-accent" style="color: var(--clr-primary-light);">de las marcas</span>
-                  pequeñas.
-                </h3>
-                <div class="mag-rule"></div>
-                <p class="mag-deck italic-accent">
-                  Cinco marcas. Cinco direcciones de arte. Una sola mirada editorial.
-                </p>
-              </div>
+  <!-- Scroll indicator (bottom center) -->
+  <div class="hero-scroll-cue hero-reveal hero-reveal-5" aria-hidden="true">
+    <span class="font-mono-accent text-[10px] tracking-[0.3em] uppercase text-primary/50">Scroll</span>
+    <div class="hero-scroll-line"></div>
+  </div>
 
-              <div class="mag-bottom-meta font-mono-accent">
-                <span>OTOÑO · 2026</span>
-                <span>SCL—CL</span>
-              </div>
-            </div>
+  <!-- Main content: massive editorial headline -->
+  <div class="relative z-10 w-full max-w-[1100px] px-5 md:px-8 text-center py-16 md:py-20">
+    <p class="hero-reveal hero-reveal-2 hero-eyebrow font-mono-accent">
+      Studio 14 — Agencia boutique chilena
+    </p>
 
-            <!-- Right page -->
-            <div class="mag-page mag-page-right">
-              <div class="mag-folio mag-folio-right">
-                <span class="font-mono-accent">P. 15</span>
-                <span class="font-mono-accent">FEATURE</span>
-              </div>
+    <h1 class="hero-reveal hero-reveal-3 hero-headline">
+      <span class="block">Tu marca merece</span>
+      <span class="italic-accent block" style="color: var(--clr-primary-light);">estar presente,</span>
+      <span class="block">no solo publicar.</span>
+    </h1>
 
-              <!-- Hero image area -->
-              <div class="mag-image">
-                <div class="mag-image-overlay"></div>
-                <div class="mag-image-caption">
-                  <p class="font-mono-accent text-[9px] tracking-widest opacity-80">PROYECTO 014</p>
-                  <p class="italic-accent text-base leading-tight" style="color: var(--clr-cream);">Boutique Hotel <br/>Lastarria</p>
-                </div>
-              </div>
+    <div class="hero-reveal hero-reveal-4 hero-deck-wrap">
+      <span class="hero-rule-h"></span>
+      <p class="hero-deck">
+        Contenido, campañas Meta Ads y páginas web — <br class="hidden md:block"/>
+        para marcas que entienden que verse bien también vende.
+      </p>
+      <span class="hero-rule-h"></span>
+    </div>
 
-              <!-- Caption + body -->
-              <div class="mag-right-text">
-                <p class="mag-caption font-mono-accent">FOT. STUDIO 14 — DIR. M. F.</p>
-                <p class="mag-body">
-                  <span class="mag-dropcap">U</span>na presencia digital cuidada no se improvisa: se piensa. Esto es lo que hacemos para las marcas que entienden que verse bien también vende.
-                </p>
-              </div>
-
-              <div class="mag-bottom-meta font-mono-accent">
-                <span>14·STUDIO</span>
-                <span>—</span>
-              </div>
-            </div>
-
-            <!-- Center seam shadow -->
-            <div class="mag-seam"></div>
-          </div>
-
-          <!-- Floating accents (editorial press style) -->
-          <div class="mag-badge-tiraje" style="animation: float 7s ease-in-out infinite;">
-            <span class="font-mono-accent text-[9px] tracking-widest opacity-70">TIRAJE</span>
-            <span class="italic-accent text-2xl leading-none">60<sup class="text-xs">/año</sup></span>
-          </div>
-
-          <div class="mag-badge-stamp" style="animation: float 9s ease-in-out infinite 1s;">
-            <div class="mag-stamp-inner">
-              <span class="font-mono-accent text-[8px] tracking-[0.25em] opacity-80">EDIT.</span>
-              <span class="italic-accent text-xl leading-none">N° 14</span>
-              <span class="font-mono-accent text-[8px] tracking-[0.25em] opacity-80">2026</span>
-            </div>
-          </div>
-
-          <div class="mag-badge-clip" style="animation: float 6s ease-in-out infinite 0.5s;">
-            <svg width="20" height="40" viewBox="0 0 20 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M5 35 V8 a5 5 0 0 1 10 0 V32 a3 3 0 0 1-6 0 V12" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/>
-            </svg>
-          </div>
-        </div>
-      </div>
+    <div class="hero-reveal hero-reveal-4 mt-10 md:mt-12 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+      <a href="#contacto" class="btn-primary text-[0.95rem] !py-4 !px-9 w-full sm:w-auto text-center touch-manipulation">
+        Reservar mi cupo &rarr;
+      </a>
+      <a href="#servicios" class="btn-secondary text-[0.95rem] !py-4 !px-9 w-full sm:w-auto text-center touch-manipulation">
+        Ver servicios
+      </a>
     </div>
   </div>
 </section>
 
 <style>
-  /* === Magazine spread === */
-  .magazine-wrap {
-    perspective: 1800px;
+  /* === Hero cinematic === */
+  .hero-cinematic {
+    min-height: calc(100svh - 5.5rem);
+    padding: 5rem 1rem 6rem;
+  }
+  @media (min-width: 768px) {
+    .hero-cinematic {
+      min-height: calc(100svh - 6rem);
+      padding: 4rem 2rem;
+    }
   }
 
-  .magazine-spread {
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 100%;
-    aspect-ratio: 1.45 / 1;
-    transform: rotate(-2.5deg);
-    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    filter: drop-shadow(0 30px 50px rgba(67, 48, 46, 0.18))
-            drop-shadow(0 12px 18px rgba(67, 48, 46, 0.08));
-  }
-  .magazine-wrap:hover .magazine-spread {
-    transform: rotate(-1deg) translateY(-4px);
+  /* === Mesh background === */
+  .hero-mesh {
+    background:
+      radial-gradient(ellipse 70% 55% at 18% 22%, rgba(255, 241, 181, 0.95) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 50% at 82% 30%, rgba(193, 219, 232, 0.78) 0%, transparent 60%),
+      radial-gradient(ellipse 70% 60% at 25% 88%, rgba(193, 219, 232, 0.55) 0%, transparent 60%),
+      radial-gradient(ellipse 55% 45% at 80% 85%, rgba(255, 241, 181, 0.65) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 40% at 50% 50%, rgba(67, 48, 46, 0.05) 0%, transparent 70%),
+      linear-gradient(135deg, #FAF6EE 0%, #FFF1B5 60%, #FFF8DC 100%);
+    animation: heroMeshMove 18s ease-in-out infinite alternate;
   }
 
-  .mag-page {
-    position: relative;
-    padding: 1.6rem 1.5rem 1.5rem;
-    background-color: var(--clr-bone);
-    background-image:
-      radial-gradient(ellipse at 30% 0%, rgba(67, 48, 46, 0.05) 0%, transparent 50%),
-      radial-gradient(ellipse at 100% 100%, rgba(193, 219, 232, 0.18) 0%, transparent 50%);
-    background-blend-mode: multiply;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .mag-page::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.2' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.45'/%3E%3C/svg%3E");
-    opacity: 0.07;
+  /* Subtle vignette so corners feel weighted */
+  .hero-vignette {
+    background:
+      radial-gradient(ellipse at center, transparent 55%, rgba(67, 48, 46, 0.07) 100%);
     pointer-events: none;
-    mix-blend-mode: multiply;
   }
 
-  .mag-page-left {
-    background-color: var(--clr-cream);
-    border-right: 1px solid rgba(67, 48, 46, 0.08);
-  }
-  .mag-page-right {
-    background-color: var(--clr-bone);
-  }
-
-  /* Folio (running header) */
-  .mag-folio {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.55rem;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
+  /* Massive faded "14" decorative numeral */
+  .hero-bg-numeral {
+    position: absolute;
+    bottom: -12vh;
+    right: -3vw;
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-weight: 500;
+    line-height: 0.8;
     color: var(--clr-primary);
-    opacity: 0.55;
-    padding-bottom: 0.75rem;
-    border-bottom: 1px solid rgba(67, 48, 46, 0.18);
-    margin-bottom: 1.2rem;
+    opacity: 0.05;
+    font-size: clamp(20rem, 50vw, 45rem);
+    letter-spacing: -0.05em;
+    z-index: 0;
+  }
+  @media (max-width: 768px) {
+    .hero-bg-numeral {
+      bottom: -8vh;
+      right: -8vw;
+      font-size: 22rem;
+      opacity: 0.04;
+    }
   }
 
-  /* Left page content */
-  .mag-left-content {
-    flex: 1;
+  /* === Corner ornaments === */
+  .hero-corner {
+    position: absolute;
+    z-index: 5;
+    color: var(--clr-primary);
+  }
+
+  .hero-corner-tl {
+    top: 5.5rem;
+    left: 1.5rem;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0.5rem 0;
-  }
-
-  .mag-eyebrow {
+    align-items: center;
+    gap: 0.65rem;
     font-size: 0.6rem;
     letter-spacing: 0.28em;
-    color: var(--clr-primary);
-    opacity: 0.6;
-    margin-bottom: 0.9rem;
-  }
-
-  .mag-headline {
-    font-family: var(--font-heading);
-    font-weight: 400;
-    font-size: clamp(1.6rem, 2.8vw, 2.4rem);
-    line-height: 0.98;
-    color: var(--clr-primary);
-    letter-spacing: -0.03em;
-    margin-bottom: 1rem;
-  }
-  .mag-headline .italic-accent {
-    display: block;
-    font-style: italic;
-    font-weight: 400;
-  }
-
-  .mag-rule {
-    width: 36px;
-    height: 1px;
-    background-color: var(--clr-primary);
-    opacity: 0.5;
-    margin: 0.6rem 0 0.9rem;
-  }
-
-  .mag-deck {
-    font-size: 0.78rem;
-    line-height: 1.5;
-    color: var(--clr-primary);
-    opacity: 0.75;
-    max-width: 18rem;
-  }
-
-  /* Bottom meta on both pages */
-  .mag-bottom-meta {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.55rem;
-    letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: var(--clr-primary);
-    opacity: 0.4;
-    padding-top: 0.6rem;
-    border-top: 1px solid rgba(67, 48, 46, 0.14);
-    margin-top: 0.8rem;
-  }
-
-  /* Right page — image block */
-  .mag-image {
-    position: relative;
-    aspect-ratio: 4 / 3.4;
-    width: 100%;
-    background:
-      linear-gradient(135deg, var(--clr-blue) 0%, var(--clr-cream-soft) 60%, var(--clr-primary-light) 130%);
-    border-radius: 2px;
-    overflow: hidden;
-    margin-bottom: 0.85rem;
-    box-shadow: inset 0 0 0 1px rgba(67, 48, 46, 0.1);
-  }
-
-  .mag-image-overlay {
-    position: absolute;
-    inset: 0;
-    background-image:
-      radial-gradient(circle at 70% 25%, rgba(255, 241, 181, 0.55) 0%, transparent 45%),
-      radial-gradient(circle at 20% 80%, rgba(67, 48, 46, 0.4) 0%, transparent 55%);
-    mix-blend-mode: multiply;
-  }
-
-  .mag-image-caption {
-    position: absolute;
-    left: 0.85rem;
-    bottom: 0.75rem;
-    color: var(--clr-cream);
-    text-shadow: 0 1px 8px rgba(42, 29, 27, 0.45);
-  }
-
-  .mag-right-text {
-    flex: 1;
-  }
-
-  .mag-caption {
-    font-size: 0.55rem;
-    letter-spacing: 0.22em;
-    color: var(--clr-primary);
     opacity: 0.55;
-    margin-bottom: 0.55rem;
+  }
+  @media (min-width: 768px) {
+    .hero-corner-tl {
+      top: 1.75rem;
+      left: 2.5rem;
+    }
+  }
+  @media (max-width: 640px) {
+    .hero-corner-tl { display: none; }
   }
 
-  .mag-body {
-    font-family: var(--font-heading);
-    font-size: 0.8rem;
-    line-height: 1.4;
+  .hero-corner-tr {
+    top: 5.5rem;
+    right: 1.5rem;
+  }
+  @media (min-width: 768px) {
+    .hero-corner-tr {
+      top: 1.75rem;
+      right: 2.5rem;
+    }
+  }
+  @media (max-width: 640px) {
+    .hero-corner-tr {
+      top: auto;
+      bottom: 1rem;
+      left: 50%;
+      right: auto;
+      transform: translateX(-50%);
+    }
+  }
+
+  .hero-corner-bl {
+    bottom: 1.75rem;
+    left: 2.5rem;
+  }
+  @media (max-width: 768px) {
+    .hero-corner-bl { display: none; }
+  }
+
+  .hero-corner-br {
+    bottom: 1.75rem;
+    right: 2.5rem;
+    transform: rotate(-6deg);
+  }
+  @media (max-width: 768px) {
+    .hero-corner-br { display: none; }
+  }
+
+  .hero-rule {
+    width: 28px;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.6;
+  }
+
+  /* === Edition stamp === */
+  .hero-stamp {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    border: 1.5px solid var(--clr-primary);
+    background-color: var(--clr-cream);
     color: var(--clr-primary);
-    text-align: justify;
-    column-count: 1;
-  }
-
-  .mag-dropcap {
-    float: left;
-    font-family: var(--font-heading);
-    font-style: italic;
-    font-size: 2.6rem;
-    line-height: 0.85;
-    padding: 0.15rem 0.4rem 0 0;
-    color: var(--clr-primary);
-    font-weight: 500;
-  }
-
-  /* Center seam */
-  .mag-seam {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    width: 14px;
-    transform: translateX(-50%);
-    background:
-      linear-gradient(to right,
-        rgba(67, 48, 46, 0) 0%,
-        rgba(67, 48, 46, 0.18) 45%,
-        rgba(67, 48, 46, 0.32) 50%,
-        rgba(67, 48, 46, 0.18) 55%,
-        rgba(67, 48, 46, 0) 100%);
-    pointer-events: none;
-    z-index: 2;
-  }
-
-  /* Floating accents */
-  .mag-badge-tiraje {
-    position: absolute;
-    top: -22px;
-    left: -24px;
-    background-color: var(--clr-primary);
-    color: var(--clr-cream);
-    padding: 0.6rem 0.9rem;
-    border-radius: 4px;
-    transform: rotate(-5deg);
-    box-shadow: 0 10px 30px -8px rgba(67, 48, 46, 0.4);
     display: flex;
     flex-direction: column;
-    gap: 2px;
-    z-index: 3;
-  }
-  .mag-badge-tiraje sup {
-    font-family: var(--font-mono);
-    opacity: 0.7;
-    font-size: 0.55rem;
-    margin-left: 1px;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    box-shadow: 0 12px 28px -10px rgba(67, 48, 46, 0.3);
   }
 
-  .mag-badge-stamp {
+  /* === Scroll cue === */
+  .hero-scroll-cue {
     position: absolute;
-    bottom: -28px;
-    right: -10px;
-    width: 92px;
-    height: 92px;
-    border-radius: 50%;
-    background-color: var(--clr-cream);
-    border: 1.5px solid var(--clr-primary);
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    z-index: 5;
+  }
+  .hero-scroll-line {
+    width: 1px;
+    height: 36px;
+    background: linear-gradient(to bottom, rgba(67, 48, 46, 0.6) 0%, transparent 100%);
+    animation: scrollPulse 2.4s ease-in-out infinite;
+    transform-origin: top;
+  }
+  @media (max-width: 768px) {
+    .hero-scroll-cue { display: none; }
+  }
+
+  /* === Headline === */
+  .hero-eyebrow {
+    display: inline-block;
+    font-size: 0.7rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
     color: var(--clr-primary);
+    opacity: 0.7;
+    margin-bottom: 1.75rem;
+    padding: 0.4rem 1rem;
+    border-top: 1px solid rgba(67, 48, 46, 0.25);
+    border-bottom: 1px solid rgba(67, 48, 46, 0.25);
+  }
+  @media (min-width: 768px) {
+    .hero-eyebrow { margin-bottom: 2.5rem; }
+  }
+
+  .hero-headline {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-size: clamp(2.85rem, 11vw, 8.5rem);
+    line-height: 0.92;
+    letter-spacing: -0.04em;
+    color: var(--clr-primary);
+    margin-bottom: 2rem;
+  }
+  .hero-headline .italic-accent {
+    font-style: italic;
+    font-weight: 400;
+  }
+  @media (min-width: 768px) {
+    .hero-headline {
+      margin-bottom: 2.75rem;
+      letter-spacing: -0.045em;
+    }
+  }
+
+  /* === Deck (subtitle with rules) === */
+  .hero-deck-wrap {
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: rotate(8deg);
-    box-shadow: 0 12px 26px -10px rgba(67, 48, 46, 0.35);
-    z-index: 3;
+    gap: 1rem;
+    max-width: 44rem;
+    margin: 0 auto;
   }
-  .mag-stamp-inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-    text-align: center;
+  .hero-rule-h {
+    flex: 1;
+    height: 1px;
+    background: rgba(67, 48, 46, 0.25);
+    max-width: 4rem;
+  }
+  .hero-deck {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: var(--clr-primary);
+    opacity: 0.78;
+    font-style: italic;
+    font-family: var(--font-heading);
+    flex-shrink: 0;
+    padding: 0 0.5rem;
+  }
+  @media (min-width: 768px) {
+    .hero-deck {
+      font-size: 1.15rem;
+    }
+  }
+  @media (max-width: 640px) {
+    .hero-rule-h { max-width: 2rem; }
+    .hero-deck { font-size: 0.85rem; }
   }
 
-  .mag-badge-clip {
-    position: absolute;
-    top: -18px;
-    right: 18%;
-    color: var(--clr-primary);
-    transform: rotate(20deg);
-    opacity: 0.55;
-    z-index: 2;
+  /* === Animations === */
+  @keyframes heroMeshMove {
+    0% {
+      background-position: 0% 0%, 100% 0%, 0% 100%, 100% 100%, 50% 50%, 0% 0%;
+    }
+    50% {
+      background-position: 8% 6%, 92% 8%, 6% 94%, 94% 92%, 52% 48%, 0% 0%;
+    }
+    100% {
+      background-position: 4% 12%, 96% 4%, 12% 96%, 88% 96%, 48% 52%, 0% 0%;
+    }
+  }
+
+  @keyframes scrollPulse {
+    0%, 100% { transform: scaleY(1); opacity: 0.8; }
+    50% { transform: scaleY(0.6); opacity: 0.3; }
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .mag-badge-tiraje,
-    .mag-badge-stamp,
-    .mag-badge-clip { animation: none !important; }
-    .magazine-spread { transition: none; }
+    .hero-mesh,
+    .hero-scroll-line { animation: none !important; }
   }
 </style>
