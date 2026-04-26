@@ -6,23 +6,47 @@ const services = [
     title: 'Creación de contenido',
     description: 'Fotografía, video, edición y diseño gráfico. Contenido pensado para que tus redes se vean impecables mes a mes — sin improvisaciones ni stock genérico.',
     includes: [
-      'Sesiones fotográficas mensuales',
-      'Reels y videos cortos editados',
-      'Diseño gráfico para feed e historias',
-      'Línea visual consistente y cuidada'
+      {
+        title: 'Sesiones fotográficas mensuales',
+        detail: 'Vamos a tu local o estudio una vez al mes a tomar las fotos que vas a usar todo el mes en tus redes.'
+      },
+      {
+        title: 'Reels y videos cortos editados',
+        detail: 'Esos videos verticales que ves en Instagram y TikTok — los grabamos, los editamos y los dejamos listos para publicar.'
+      },
+      {
+        title: 'Diseño gráfico para feed e historias',
+        detail: 'Las publicaciones cuadradas que aparecen en tu perfil y las historias que duran 24 horas, todas en la misma línea visual.'
+      },
+      {
+        title: 'Línea visual consistente',
+        detail: 'Todo lo que sale de tu marca se ve "de la misma familia": colores, tipografías y estilo de fotos siempre coherentes.'
+      }
     ],
     accentVar: '--clr-cream'
   },
   {
     number: '02',
     badge: 'Performance',
-    title: 'Campañas Meta Ads',
-    description: 'Estrategia, segmentación y gestión de campañas en Instagram y Facebook Ads. Convertimos tu presupuesto en resultados medibles, no en likes vacíos.',
+    title: 'Paid Media',
+    description: 'Estrategia, segmentación y gestión de publicidad pagada en Instagram, Facebook y otras plataformas. Convertimos tu presupuesto en resultados medibles, no en likes vacíos.',
     includes: [
-      'Estrategia de pauta mensual',
-      'Segmentación precisa por audiencia',
-      'Creatividades diseñadas para convertir',
-      'Reporte claro y sin tecnicismos'
+      {
+        title: 'Plan de inversión mensual',
+        detail: 'Definimos cuánto invertir, cuándo y en qué tipo de anuncio según los objetivos del mes (más seguidores, más mensajes, más visitas a tu web, etc.).'
+      },
+      {
+        title: 'Anuncios mostrados solo a gente relevante',
+        detail: 'Configuramos los anuncios para que los vean únicamente las personas que podrían convertirse en tus clientes — por edad, ubicación, intereses y comportamiento.'
+      },
+      {
+        title: 'Diseño de los anuncios',
+        detail: 'Creamos las imágenes, videos y textos que la gente va a ver, pensados para que actúen (te escriban, visiten tu web o sigan tu cuenta), no solo miren.'
+      },
+      {
+        title: 'Reporte mensual sin tecnicismos',
+        detail: 'Te enviamos un resumen en español simple: cuánta gente vio tus anuncios, cuántos te contactaron y qué vamos a ajustar el próximo mes.'
+      }
     ],
     accentVar: '--clr-blue'
   },
@@ -32,10 +56,22 @@ const services = [
     title: 'Páginas web',
     description: 'Diseño y desarrollo de sitios web que comunican tu marca con estilo. Rápidos, responsivos y pensados para que tu cliente encuentre lo que busca sin fricciones.',
     includes: [
-      'Diseño a medida, no plantillas',
-      'Optimización móvil y SEO base',
-      'Integración con tus redes y WhatsApp',
-      'Dominio y hosting incluidos el primer año'
+      {
+        title: 'Diseño a medida, no plantillas',
+        detail: 'Tu sitio se diseña desde cero pensando en tu marca — no descargamos un template genérico que se vea igual al de otros 100 negocios.'
+      },
+      {
+        title: 'Se ve bien en celular y aparece en Google',
+        detail: 'Optimizada para que se vea perfecta desde el celular (donde la mira la mayoría) y configurada con lo básico para que Google la encuentre cuando alguien te busca.'
+      },
+      {
+        title: 'Conectada con tus redes y WhatsApp',
+        detail: 'Botones directos a Instagram, WhatsApp o el medio que uses, para que tu visita pase de la web al contacto en un solo clic.'
+      },
+      {
+        title: 'Dominio y hosting incluidos el primer año',
+        detail: 'Nos encargamos de comprar tu dirección web (ej. tumarca.cl) y del servidor donde vive el sitio durante el primer año, sin costos extra.'
+      }
     ],
     accentVar: '--clr-primary-light'
   }
@@ -77,13 +113,16 @@ const services = [
           </p>
 
           <!-- Includes -->
-          <div class="space-y-2.5 mb-8 mt-auto">
+          <div class="space-y-4 mb-8 mt-auto">
             {service.includes.map(item => (
-              <div class="flex items-start gap-2.5">
-                <svg class="w-4 h-4 text-primary/50 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <div class="flex items-start gap-3">
+                <svg class="w-4 h-4 text-primary/60 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
                 </svg>
-                <span class="text-text-main text-sm leading-relaxed">{item}</span>
+                <div class="flex-1">
+                  <p class="text-primary font-medium text-sm leading-snug" style="font-family: var(--font-heading);">{item.title}</p>
+                  <p class="text-text-muted text-[0.82rem] leading-relaxed mt-1">{item.detail}</p>
+                </div>
               </div>
             ))}
           </div>
