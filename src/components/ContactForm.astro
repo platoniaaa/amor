@@ -1,10 +1,21 @@
 ---
-const serviceOptions = [
-  'Creación de contenido',
-  'Paid Media',
-  'Página web',
-  'Plan combinado',
-  'Aún no lo tengo claro'
+const optionGroups = [
+  {
+    label: 'Servicios',
+    options: [
+      'Creación de contenido mensual',
+      'Paid Media',
+      'Páginas web'
+    ]
+  },
+  {
+    label: 'Planes',
+    options: [
+      'Plan Básico',
+      'Plan Intermedio',
+      'Plan Avanzado'
+    ]
+  }
 ];
 ---
 
@@ -101,8 +112,12 @@ const serviceOptions = [
             <label for="servicio" class="block text-sm font-medium text-primary mb-2" style="font-family: var(--font-heading);">¿Qué te interesa?</label>
             <select id="servicio" name="servicio" required class="form-input">
               <option value="" disabled selected>Selecciona una opción</option>
-              {serviceOptions.map(opt => (
-                <option value={opt}>{opt}</option>
+              {optionGroups.map(group => (
+                <optgroup label={group.label}>
+                  {group.options.map(opt => (
+                    <option value={opt}>{opt}</option>
+                  ))}
+                </optgroup>
               ))}
             </select>
           </div>
