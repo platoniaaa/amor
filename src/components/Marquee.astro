@@ -1,14 +1,11 @@
 ---
 const items = [
-  'Contenido con estilo',
-  'Paid media con criterio',
-  'Web con personalidad',
-  'Estudio creativo · Santiago',
-  'Cuidamos tu marca como si fuera nuestra',
-  'Presencia, no venta forzada'
+  'Creación de contenido mensual',
+  'Campañas y anuncios pagados',
+  'Páginas web a medida'
 ];
-// Duplicate for seamless marquee loop
-const marquee = [...items, ...items];
+// Repeat enough times for a seamless loop on wide screens
+const marquee = Array(8).fill(items).flat();
 ---
 
 <div class="marquee-bar" role="presentation" aria-hidden="true">
