@@ -29,19 +29,19 @@ const services = [
     number: '02',
     badge: 'Contenido',
     title: 'Creación de contenido mensual',
-    description: 'Una jornada de producción al mes contigo, y de ahí sacamos todo lo que vas a publicar en tus redes.',
+    description: 'Una jornada de producción al mes contigo: grabamos, fotografiamos y editamos todo lo que vas a publicar en tus redes.',
     includes: [
       {
-        title: 'Producción mensual',
-        detail: 'Una jornada al mes en tu local o donde tu marca esté pasando.'
+        title: 'Una jornada al mes',
+        detail: 'Vamos una vez al mes a grabar y fotografiar a tu local, evento o donde tu marca esté pasando.'
       },
       {
-        title: 'Editamos y publicamos por ti',
-        detail: 'Reels, historias y posts subidos directo a tus redes.'
+        title: 'Edición de fotos y videos',
+        detail: 'Reels, historias y publicaciones del feed editados y listos.'
       },
       {
-        title: 'Reciclamos el contenido',
-        detail: 'De una jornada sacamos piezas para todo el mes.'
+        title: 'Publicamos en tus redes',
+        detail: 'Subimos directo a tu Instagram. Tú no tienes que hacer nada.'
       },
       {
         title: 'Manual de marca incluido',
@@ -52,31 +52,6 @@ const services = [
   },
   {
     number: '03',
-    badge: 'Edición',
-    title: 'Edición de videos',
-    description: 'Servicio puntual: tú nos entregas el material grabado y nosotros lo editamos listo para publicar.',
-    includes: [
-      {
-        title: 'Edición por proyecto',
-        detail: 'Cobro fijo por video, sin contrato mensual.'
-      },
-      {
-        title: 'Trabajamos con tu material',
-        detail: 'Reels, eventos, brutos o videos que ya tienes grabados.'
-      },
-      {
-        title: 'Cortes optimizados',
-        detail: 'Formato vertical y duración pensados para Instagram.'
-      },
-      {
-        title: 'Entrega lista para subir',
-        detail: 'Te lo enviamos editado, con música y sin marcas de agua.'
-      }
-    ],
-    accentVar: '--clr-cream-soft'
-  },
-  {
-    number: '04',
     badge: 'Presencia',
     title: 'Páginas web',
     description: 'Nos juntamos, escuchamos qué necesitas y diseñamos tu página web a medida.',
@@ -94,8 +69,8 @@ const services = [
         detail: 'Se ve bien en móvil y aparece cuando te buscan.'
       },
       {
-        title: 'Dominio incluido el primer año',
-        detail: 'Tu dirección web (ej: tumarca.cl) la primera anualidad.'
+        title: 'Dominio incluido los primeros 2 años',
+        detail: 'Tu dirección web (ej: tumarca.cl) cubierta las dos primeras anualidades.'
       }
     ],
     accentVar: '--clr-primary-light'
@@ -109,13 +84,13 @@ const services = [
   <div class="max-w-[1280px] mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
     <div class="text-center mb-12 md:mb-20 fade-up">
       <span class="eyebrow mb-6 inline-block">Lo que hacemos</span>
-      <h2 class="section-title mt-4">Cuatro servicios, <span class="italic-accent" style="color: var(--clr-primary-light);">una sola mirada</span></h2>
+      <h2 class="section-title mt-4">Tres servicios, <span class="italic-accent" style="color: var(--clr-primary-light);">una sola mirada</span></h2>
       <p class="section-subtitle">
-        No vendemos por Instagram — construimos presencia. Servicios pensados para marcas que quieren verse bien sin tener que pensarlo cada semana.
+        Cada servicio se contrata <strong class="text-primary font-semibold">de forma individual o combinado</strong>, según lo que necesite tu marca. Si quieres todo bajo un mismo plan, mira la sección de planes más abajo.
       </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 md:gap-6">
       {services.map((service, i) => (
         <div
           class="fade-up group relative rounded-3xl p-7 md:p-10 border border-primary/10 transition-all duration-500 hover:-translate-y-1 hover:border-primary/25 shadow-editorial hover:shadow-editorial-lg flex flex-col"
@@ -158,11 +133,5 @@ const services = [
       ))}
     </div>
 
-    <!-- Combined note -->
-    <div class="fade-up mt-10 md:mt-16 text-center">
-      <p class="italic-accent text-lg md:text-xl text-text-muted max-w-2xl mx-auto leading-relaxed">
-        &ldquo;Cada servicio se contrata por separado o combinado en uno de nuestros planes.&rdquo;
-      </p>
-    </div>
   </div>
 </section>
