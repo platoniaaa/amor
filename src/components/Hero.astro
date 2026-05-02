@@ -54,7 +54,7 @@
   /* === Hero cinematic === */
   .hero-cinematic {
     min-height: auto;
-    padding: 4rem 1rem 3.5rem;
+    padding: 3rem 1rem 3rem;
   }
   @media (min-width: 768px) {
     .hero-cinematic {
@@ -99,9 +99,9 @@
   }
   @media (max-width: 768px) {
     .hero-bg-numeral {
-      bottom: -8vh;
-      right: -8vw;
-      font-size: 22rem;
+      bottom: -6vh;
+      right: -10vw;
+      font-size: 16rem;
       opacity: 0.04;
     }
   }
@@ -161,11 +161,13 @@
   .hero-headline {
     font-family: var(--font-heading);
     font-weight: 400;
-    font-size: clamp(2.85rem, 11vw, 8.5rem);
-    line-height: 0.92;
-    letter-spacing: -0.04em;
+    font-size: clamp(2.1rem, 10vw, 8.5rem);
+    line-height: 0.95;
+    letter-spacing: -0.03em;
     color: var(--clr-primary);
-    margin-bottom: 2rem;
+    margin-bottom: 1.75rem;
+    word-break: break-word;
+    hyphens: auto;
   }
   .hero-headline .italic-accent {
     font-style: italic;
@@ -173,6 +175,8 @@
   }
   @media (min-width: 768px) {
     .hero-headline {
+      font-size: clamp(3rem, 11vw, 8.5rem);
+      line-height: 0.92;
       margin-bottom: 2.75rem;
       letter-spacing: -0.045em;
     }
@@ -195,22 +199,35 @@
   }
   .hero-deck {
     font-size: 0.95rem;
-    line-height: 1.55;
+    line-height: 1.5;
     color: var(--clr-primary);
     opacity: 0.78;
     font-style: italic;
     font-family: var(--font-heading);
-    flex-shrink: 0;
+    min-width: 0;
     padding: 0 0.5rem;
   }
   @media (min-width: 768px) {
     .hero-deck {
       font-size: 1.15rem;
+      flex-shrink: 0;
     }
   }
+  /* Stack vertically on small screens, hide horizontal rules */
   @media (max-width: 640px) {
-    .hero-rule-h { max-width: 2rem; }
-    .hero-deck { font-size: 0.85rem; }
+    .hero-deck-wrap {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .hero-rule-h {
+      width: 32px;
+      max-width: 32px;
+      flex: none;
+    }
+    .hero-deck {
+      font-size: 0.95rem;
+      padding: 0;
+    }
   }
 
   /* === Animations === */
