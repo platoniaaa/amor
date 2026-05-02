@@ -113,7 +113,7 @@ const services = [
           </p>
 
           <!-- Includes -->
-          <div class="space-y-4 mb-8">
+          <div class="space-y-4 mb-6">
             {service.includes.map(item => (
               <div class="flex items-start gap-3">
                 <svg class="w-4 h-4 text-primary/60 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
@@ -127,11 +127,43 @@ const services = [
             ))}
           </div>
 
+          <!-- CTA -->
+          <a href="#contacto" class="service-cta mt-auto">
+            Lo quiero &rarr;
+          </a>
+
           <!-- Accent bar at bottom -->
-          <div class="h-1 rounded-full -mx-2 mt-auto" style={`background-color: var(${service.accentVar});`}></div>
+          <div class="h-1 rounded-full -mx-2 mt-5" style={`background-color: var(${service.accentVar});`}></div>
         </div>
       ))}
     </div>
 
   </div>
 </section>
+
+<style>
+  .service-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    background-color: transparent;
+    color: var(--clr-primary);
+    font-family: var(--font-sans);
+    font-weight: 600;
+    border: 1px solid rgba(67, 48, 46, 0.3);
+    border-radius: 999px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+    font-size: 0.85rem;
+    letter-spacing: 0.01em;
+  }
+  .service-cta:hover {
+    background-color: var(--clr-primary);
+    color: var(--clr-cream);
+    border-color: var(--clr-primary);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px -6px rgba(67, 48, 46, 0.3);
+  }
+</style>
