@@ -73,7 +73,8 @@ const services = [
         detail: 'Tu dirección web (ej: tumarca.cl) cubierta las dos primeras anualidades.'
       }
     ],
-    accentVar: '--clr-primary-light'
+    accentVar: '--clr-primary-light',
+    badgeTextVar: '--clr-cream'
   }
 ];
 ---
@@ -103,7 +104,7 @@ const services = [
           <!-- Number + badge -->
           <div class="flex items-center justify-between mb-6">
             <span class="font-mono-accent text-xs text-text-muted tracking-widest">STUDIO · {service.number}</span>
-            <span class="text-[10px] font-mono-accent uppercase tracking-[0.2em] px-3 py-1 rounded-full border border-primary/20 text-primary" style={`background-color: var(${service.accentVar});`}>
+            <span class="text-[10px] font-mono-accent uppercase tracking-[0.2em] px-3 py-1 rounded-full border border-primary/20" style={`background-color: var(${service.accentVar}); color: var(${service.badgeTextVar || '--clr-primary'});`}>
               {service.badge}
             </span>
           </div>
