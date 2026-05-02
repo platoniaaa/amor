@@ -1,0 +1,293 @@
+---
+const plans = [
+  {
+    badge: 'Plan',
+    name: 'Básico',
+    tagline: 'Presencia mensual cuidada en Instagram.',
+    description: 'El punto de partida. Tu marca activa todos los meses con contenido propio y un calendario detrás.',
+    includes: [
+      'Planificación de contenido mensual',
+      'Creación del contenido (jornada de producción)',
+      'Publicación directa en Instagram'
+    ],
+    featured: false
+  },
+  {
+    badge: 'Más elegido',
+    name: 'Intermedio',
+    tagline: 'Presencia + alcance pagado para que más gente te conozca.',
+    description: 'Para marcas que quieren sumar audiencia activa, no solo mantenerse visibles.',
+    includes: [
+      'Todo lo del plan Básico',
+      'Anuncios pagados en Instagram y Facebook',
+      'Reporte mensual al cierre de campaña'
+    ],
+    featured: true
+  },
+  {
+    badge: 'Plan',
+    name: 'Avanzado',
+    tagline: 'Presencia digital completa, de las redes a la web.',
+    description: 'Cuando además de redes y pauta necesitas una página web a la altura de tu marca.',
+    includes: [
+      'Todo lo del plan Intermedio',
+      'Página web a medida',
+      'Dominio incluido el primer año'
+    ],
+    featured: false
+  }
+];
+---
+
+<section id="planes" class="relative py-16 md:py-32 overflow-hidden" style="background-color: var(--clr-cream);">
+  <div class="absolute inset-0 noise-bg opacity-40"></div>
+
+  <!-- Decorative blurs -->
+  <div class="absolute -top-20 -left-20 w-80 h-80 rounded-full blur-3xl opacity-50 pointer-events-none" style="background-color: var(--clr-blue);"></div>
+  <div class="absolute -bottom-20 -right-20 w-96 h-96 rounded-full blur-3xl opacity-30 pointer-events-none" style="background-color: var(--clr-cream-soft);"></div>
+
+  <div class="max-w-[1280px] mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
+    <div class="text-center mb-12 md:mb-20 fade-up">
+      <span class="eyebrow mb-6 inline-block">Planes</span>
+      <h2 class="section-title mt-4">
+        Tres formas de <span class="italic-accent" style="color: var(--clr-primary-light);">trabajar juntos</span>
+      </h2>
+      <p class="section-subtitle">
+        Cada plan incluye lo del anterior. Empieza por donde tenga más sentido para tu marca y escala cuando lo necesites.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 items-stretch">
+      {plans.map((plan, i) => (
+        <div
+          class={`fade-up plan-card ${plan.featured ? 'plan-card-featured' : ''}`}
+          style={`transition-delay: ${i * 120}ms`}
+        >
+          <!-- Badge -->
+          <div class="plan-badge-wrap">
+            <span class={`plan-badge ${plan.featured ? 'plan-badge-featured' : ''}`}>{plan.badge}</span>
+          </div>
+
+          <h3 class="plan-name">
+            <span class="italic-accent">{plan.name}</span>
+          </h3>
+
+          <p class="plan-tagline">{plan.tagline}</p>
+
+          <div class="plan-rule"></div>
+
+          <p class="plan-description">{plan.description}</p>
+
+          <ul class="plan-includes">
+            {plan.includes.map(item => (
+              <li class="flex items-start gap-2.5">
+                <svg class="plan-check" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+
+          <a href="#contacto" class={`plan-cta ${plan.featured ? 'plan-cta-featured' : ''}`}>
+            Lo quiero &rarr;
+          </a>
+        </div>
+      ))}
+    </div>
+
+    <p class="fade-up text-center text-sm md:text-base text-text-muted mt-10 md:mt-14 italic-accent">
+      Los precios se conversan según las necesidades específicas de tu marca.
+    </p>
+  </div>
+</section>
+
+<style>
+  .plan-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem 1.75rem 2rem;
+    border-radius: 1.75rem;
+    background-color: var(--clr-white);
+    border: 1px solid rgba(67, 48, 46, 0.1);
+    box-shadow: 0 4px 24px rgba(67, 48, 46, 0.06);
+    transition: all 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .plan-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px -10px rgba(67, 48, 46, 0.18);
+    border-color: rgba(67, 48, 46, 0.25);
+  }
+  @media (min-width: 768px) {
+    .plan-card { padding: 3rem 2rem 2.5rem; }
+  }
+
+  .plan-card-featured {
+    background-color: var(--clr-primary);
+    border-color: var(--clr-primary);
+    color: var(--clr-cream);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px -12px rgba(67, 48, 46, 0.35);
+  }
+  .plan-card-featured:hover {
+    transform: translateY(-12px);
+  }
+
+  .plan-badge-wrap {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .plan-badge {
+    display: inline-block;
+    padding: 0.4rem 1.1rem;
+    background-color: var(--clr-bone);
+    border: 1px solid rgba(67, 48, 46, 0.18);
+    border-radius: 999px;
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--clr-primary);
+    font-weight: 500;
+  }
+
+  .plan-badge-featured {
+    background-color: var(--clr-cream);
+    border-color: var(--clr-cream);
+    color: var(--clr-primary);
+    font-weight: 600;
+  }
+
+  .plan-name {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 1;
+    color: var(--clr-primary);
+    margin: 0.5rem 0 0.75rem;
+    text-align: center;
+  }
+  .plan-card-featured .plan-name { color: var(--clr-cream); }
+  @media (min-width: 768px) {
+    .plan-name { font-size: 3rem; }
+  }
+
+  .plan-tagline {
+    text-align: center;
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 0.95rem;
+    line-height: 1.45;
+    color: var(--clr-primary);
+    opacity: 0.85;
+    min-height: 2.7rem;
+    margin-bottom: 1.25rem;
+    padding: 0 0.5rem;
+  }
+  .plan-card-featured .plan-tagline {
+    color: var(--clr-cream);
+    opacity: 0.85;
+  }
+
+  .plan-rule {
+    width: 32px;
+    height: 1px;
+    background-color: var(--clr-primary);
+    opacity: 0.35;
+    margin: 0 auto 1.5rem;
+  }
+  .plan-card-featured .plan-rule {
+    background-color: var(--clr-cream);
+    opacity: 0.4;
+  }
+
+  .plan-description {
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: var(--clr-text-muted);
+    text-align: center;
+    margin-bottom: 1.75rem;
+    padding: 0 0.25rem;
+  }
+  .plan-card-featured .plan-description {
+    color: var(--clr-cream);
+    opacity: 0.78;
+  }
+
+  .plan-includes {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
+  .plan-includes li {
+    font-size: 0.92rem;
+    line-height: 1.45;
+    color: var(--clr-primary);
+  }
+  .plan-card-featured .plan-includes li {
+    color: var(--clr-cream);
+  }
+
+  .plan-check {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    color: var(--clr-primary);
+    opacity: 0.55;
+  }
+  .plan-card-featured .plan-check {
+    color: var(--clr-cream);
+    opacity: 0.75;
+  }
+
+  .plan-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0.9rem 1.5rem;
+    background-color: transparent;
+    color: var(--clr-primary);
+    font-family: var(--font-sans);
+    font-weight: 600;
+    border: 1px solid rgba(67, 48, 46, 0.35);
+    border-radius: 999px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+    font-size: 0.92rem;
+    margin-top: auto;
+  }
+  .plan-cta:hover {
+    background-color: var(--clr-primary);
+    color: var(--clr-cream);
+    border-color: var(--clr-primary);
+    transform: translateY(-1px);
+  }
+
+  .plan-cta-featured {
+    background-color: var(--clr-cream);
+    color: var(--clr-primary);
+    border-color: var(--clr-cream);
+  }
+  .plan-cta-featured:hover {
+    background-color: var(--clr-bone);
+    color: var(--clr-primary);
+    border-color: var(--clr-bone);
+    transform: translateY(-1px);
+    box-shadow: 0 10px 24px -6px rgba(255, 241, 181, 0.4);
+  }
+
+  @media (max-width: 768px) {
+    .plan-card-featured { transform: none; }
+    .plan-card-featured:hover { transform: translateY(-4px); }
+  }
+</style>
