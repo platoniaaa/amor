@@ -24,35 +24,6 @@
     <span class="chip-limited">5 cupos · Abril 2026</span>
   </div>
 
-  <!-- Bottom-left credit line -->
-  <div class="hero-corner hero-corner-bl hero-reveal hero-reveal-5" aria-hidden="true">
-    <div class="flex items-center gap-3">
-      <div class="flex -space-x-2">
-        <div class="w-7 h-7 rounded-full border-2" style="background-color: var(--clr-blue); border-color: var(--clr-cream);"></div>
-        <div class="w-7 h-7 rounded-full border-2" style="background-color: var(--clr-primary-light); border-color: var(--clr-cream);"></div>
-        <div class="w-7 h-7 rounded-full border-2" style="background-color: var(--clr-primary); border-color: var(--clr-cream);"></div>
-      </div>
-      <p class="text-[10px] md:text-xs text-primary/60 font-mono-accent tracking-widest uppercase">
-        Marcas que nos eligen mes a mes
-      </p>
-    </div>
-  </div>
-
-  <!-- Bottom-right edition stamp -->
-  <div class="hero-corner hero-corner-br hero-reveal hero-reveal-5" aria-hidden="true">
-    <div class="hero-stamp">
-      <span class="font-mono-accent text-[8px] tracking-[0.3em]">PRESS</span>
-      <span class="italic-accent text-2xl leading-none">N°14</span>
-      <span class="font-mono-accent text-[8px] tracking-[0.3em]">2026</span>
-    </div>
-  </div>
-
-  <!-- Scroll indicator (bottom center) -->
-  <div class="hero-scroll-cue hero-reveal hero-reveal-5" aria-hidden="true">
-    <span class="font-mono-accent text-[10px] tracking-[0.3em] uppercase text-primary/50">Scroll</span>
-    <div class="hero-scroll-line"></div>
-  </div>
-
   <!-- Main content: massive editorial headline -->
   <div class="relative z-10 w-full max-w-[1100px] px-5 md:px-8 text-center py-16 md:py-20">
     <p class="hero-reveal hero-reveal-2 hero-eyebrow font-mono-accent">
@@ -189,67 +160,11 @@
     }
   }
 
-  .hero-corner-bl {
-    bottom: 1.75rem;
-    left: 2.5rem;
-  }
-  @media (max-width: 768px) {
-    .hero-corner-bl { display: none; }
-  }
-
-  .hero-corner-br {
-    bottom: 1.75rem;
-    right: 2.5rem;
-    transform: rotate(-6deg);
-  }
-  @media (max-width: 768px) {
-    .hero-corner-br { display: none; }
-  }
-
   .hero-rule {
     width: 28px;
     height: 1px;
     background: currentColor;
     opacity: 0.6;
-  }
-
-  /* === Edition stamp === */
-  .hero-stamp {
-    width: 96px;
-    height: 96px;
-    border-radius: 50%;
-    border: 1.5px solid var(--clr-primary);
-    background-color: var(--clr-cream);
-    color: var(--clr-primary);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 4px;
-    box-shadow: 0 12px 28px -10px rgba(67, 48, 46, 0.3);
-  }
-
-  /* === Scroll cue === */
-  .hero-scroll-cue {
-    position: absolute;
-    bottom: 1.25rem;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    z-index: 5;
-  }
-  .hero-scroll-line {
-    width: 1px;
-    height: 36px;
-    background: linear-gradient(to bottom, rgba(67, 48, 46, 0.6) 0%, transparent 100%);
-    animation: scrollPulse 2.4s ease-in-out infinite;
-    transform-origin: top;
-  }
-  @media (max-width: 768px) {
-    .hero-scroll-cue { display: none; }
   }
 
   /* === Headline === */
@@ -337,13 +252,7 @@
     }
   }
 
-  @keyframes scrollPulse {
-    0%, 100% { transform: scaleY(1); opacity: 0.8; }
-    50% { transform: scaleY(0.6); opacity: 0.3; }
-  }
-
   @media (prefers-reduced-motion: reduce) {
-    .hero-mesh,
-    .hero-scroll-line { animation: none !important; }
+    .hero-mesh { animation: none !important; }
   }
 </style>
