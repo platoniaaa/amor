@@ -165,14 +165,23 @@ const serviceOptions = [
     background-color: var(--clr-white);
     box-shadow: 0 0 0 3px rgba(67, 48, 46, 0.08);
   }
+
+  /* Hide all form fields once submitted, leave only success/error message visible */
+  form#contact-form.form-submitted > *:not(#form-success):not(#form-error) {
+    display: none !important;
+  }
 </style>
 
 <script>
+  const ENDPOINT = 'https://script.google.com/macros/s/AKfycby3aIHT2VwpaBT3Zu3uR4_imuhINEuWwmw1we1HQICLVHHwc9MygxPSC3c3SDfT8HBP/exec';
+
   const form = document.getElementById('contact-form') as HTMLFormElement;
   const successMsg = document.getElementById('form-success')!;
   const errorMsg = document.getElementById('form-error')!;
+  const errorP = errorMsg.querySelector('p') as HTMLParagraphElement | null;
+  const defaultErrorText = errorP?.textContent ?? 'Por favor completa todos los campos obligatorios.';
 
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const formData = new FormData(form);
@@ -182,18 +191,36 @@ const serviceOptions = [
     const mensaje = formData.get('mensaje');
 
     if (!nombre || !email || !servicio || !mensaje) {
+      if (errorP) errorP.textContent = defaultErrorText;
       errorMsg.classList.remove('hidden');
       setTimeout(() => errorMsg.classList.add('hidden'), 3000);
       return;
     }
 
     const submitBtn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+    const originalLabel = submitBtn.innerHTML;
     submitBtn.disabled = true;
-    submitBtn.innerHTML = 'Enviando...';
+    submitBtn.innerHTML = 'Enviando…';
 
-    setTimeout(() => {
-      form.querySelectorAll('input, textarea, select, button').forEach(el => (el as HTMLElement).style.display = 'none');
+    const params = new URLSearchParams();
+    formData.forEach((value, key) => params.append(key, value as string));
+
+    try {
+      const response = await fetch(ENDPOINT, {
+        method: 'POST',
+        body: params,
+      });
+
+      if (!response.ok) throw new Error('Network error');
+
+      form.classList.add('form-submitted');
       successMsg.classList.remove('hidden');
-    }, 1000);
+    } catch (err) {
+      if (errorP) errorP.textContent = 'Hubo un problema al enviar. Intenta de nuevo o escríbenos a studio14@gmail.com.';
+      errorMsg.classList.remove('hidden');
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalLabel;
+      setTimeout(() => errorMsg.classList.add('hidden'), 6000);
+    }
   });
 </script>
