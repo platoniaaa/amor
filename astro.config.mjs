@@ -4,8 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://platoniaaa.github.io',
-  base: '/amor/',
+  site: 'https://studio14.cl',
   trailingSlash: 'ignore',
   integrations: [sitemap()],
   vite: {
